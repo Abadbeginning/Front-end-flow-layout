@@ -1,0 +1,16 @@
+/* margin 上下是选择最大的 覆盖 左右是叠加 */
+.box1 {
+    width: 200px;
+    height: 200px;
+    background: pink;
+  
+    margin-bottom: 100px;
+  }
+  
+  
+  .box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    margin-top: 30px;
+  }

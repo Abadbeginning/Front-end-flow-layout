@@ -1,0 +1,18 @@
+/* padding 填充最小就是不填充(0) */
+/* margin不同了 可以上下左右的负偏移 */
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    padding: 20px;
+    /* border: 1px black solid; */
+    border: 10px rgba(0, 0, 0, 0.5) solid;
+    margin: 20px;
+  }
+  
+  /* 假设没有边框 背景色会平铺到非margin的区域 */
+  .box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+  }
