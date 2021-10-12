@@ -1,0 +1,20 @@
+.box1 {
+    width: 200px;
+    /* background: pink; */
+    border: 1px black solid;
+}
+
+/* 子元素 浮动 ==> 块级元素变内联元素 */
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    float: left;
+}
+
+/* 清盒子 对块级盒子有效 对内联盒子无效 */
+.clearfix::after {
+    content: "adc";
+    clear: both;
+    display: block;
+}

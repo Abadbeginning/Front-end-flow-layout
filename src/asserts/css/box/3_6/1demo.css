@@ -1,0 +1,26 @@
+body {
+    border: 1px black solid;
+}
+
+/* 浮动可以理解为飘在水面上层的船 而正常的鱼儿 算是文档流 */
+/* 对于鱼儿来说 你在它的上面是不影响的它正常生活 
+    但是你旁边有一条新的小船过来 你两是相互影响 
+    毕竟河面就这么大
+*/
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    float: left;
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background: skyblue;
+    /* float: left; */
+    /* 清除浮动 某大佬家的小鱼就不喜欢 
+        船在它头上挡住太阳 强烈要求禁船通行 
+    */
+    clear: both;
+}

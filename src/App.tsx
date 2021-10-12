@@ -4,6 +4,10 @@ import './App.css';
 // import {BlockBox} from './box/3_3/1demo'
 // import {StandardBox} from './box/3_4/1demo'
 import {StrangeBox} from './box/3_5/1demo'
+import {FloatBox} from './box/3_6/1demo'
+import {FloatBox1} from './box/3_6/2demo'
+import {FloatBox2} from './box/3_7/1demo'
+import {FloatBox3} from './box/3_7/2demo'
 
 function App() {
 
@@ -11,7 +15,11 @@ function App() {
     <div className="App">
       {/* <BlockBox /> */}
       {/* <StandardBox /> */}
-      <StrangeBox />
+      {/* <StrangeBox /> */}
+      {/* <FloatBox /> */}
+      {/* <FloatBox1 /> */}
+      {/* <FloatBox2 /> */}
+      <FloatBox3 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
