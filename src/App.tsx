@@ -9,6 +9,9 @@ import {FloatBox1} from './box/3_6/2demo'
 import {FloatBox2} from './box/3_7/1demo'
 import {FloatBox3} from './box/3_7/2demo'
 import {Position} from './box/3_8/1demo'
+import {Position1} from './box/3_8/2demo'
+import {PositionSticky} from './box/3_8/3demo'
+import {PositionSticky1} from './box/3_8/4demo'
 
 function App() {
 
@@ -21,7 +24,10 @@ function App() {
       {/* <FloatBox1 /> */}
       {/* <FloatBox2 /> */}
       {/* <FloatBox3 /> */}
-      <Position />
+      {/* <Position /> */}
+      {/* <Position1 /> */}
+      {/* <PositionSticky /> */}
+      <PositionSticky1 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

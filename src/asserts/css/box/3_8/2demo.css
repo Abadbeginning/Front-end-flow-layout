@@ -1,0 +1,33 @@
+body {
+    height: 2000px;
+    position: relative;
+}
+
+/* 当有多个定位 选最近的 */
+.box1 {
+    width: 500px;
+    height: 500px;
+    border: 1px black solid;
+    margin: 200px;
+    position: relative;
+    /* position: relative; */
+    /* position: static; */
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    /* position: absolute; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* right: 0;
+    bottom: 0; */
+}
+
+/* .box3 {
+    width: 200px;
+    height: 200px;
+    background: red;
+} */

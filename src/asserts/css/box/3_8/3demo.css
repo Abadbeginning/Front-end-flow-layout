@@ -1,0 +1,12 @@
+body {
+    height: 2000px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+div {
+    position: sticky;
+    top: 0;
+}

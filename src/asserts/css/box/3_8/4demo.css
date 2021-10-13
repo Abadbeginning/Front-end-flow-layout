@@ -1,0 +1,25 @@
+/* z-index 和最外层比较 */
+.parent {
+    position: absolute;
+    z-index: 4;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 3;
+}
