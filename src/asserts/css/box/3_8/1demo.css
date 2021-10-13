@@ -1,0 +1,23 @@
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    /* position: relative;
+    left: 50px;
+    top: 100px; */
+    /* margin-left: 100px;
+    margin-top: 100px; */
+    position: absolute;
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    background: red;
+}

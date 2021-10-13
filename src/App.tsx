@@ -8,6 +8,7 @@ import {FloatBox} from './box/3_6/1demo'
 import {FloatBox1} from './box/3_6/2demo'
 import {FloatBox2} from './box/3_7/1demo'
 import {FloatBox3} from './box/3_7/2demo'
+import {Position} from './box/3_8/1demo'
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
       {/* <FloatBox /> */}
       {/* <FloatBox1 /> */}
       {/* <FloatBox2 /> */}
-      <FloatBox3 />
+      {/* <FloatBox3 /> */}
+      <Position />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
