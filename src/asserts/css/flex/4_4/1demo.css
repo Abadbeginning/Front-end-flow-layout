@@ -1,0 +1,22 @@
+.main {
+    width: 500px;
+    height: 500px;
+    background: skyblue;
+    display: flex;
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.main div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    font-size: 20px;
+    border: 2px black solid;
+}

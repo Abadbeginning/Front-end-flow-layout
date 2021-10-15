@@ -12,6 +12,8 @@ import {Position} from './box/3_8/1demo'
 import {Position1} from './box/3_8/2demo'
 import {PositionSticky} from './box/3_8/3demo'
 import {PositionSticky1} from './box/3_8/4demo'
+import {Flex1} from './flex/4_2/1demo'
+import {FlexJustify} from './flex/4_4/1demo'
 
 function App() {
 
@@ -27,7 +29,9 @@ function App() {
       {/* <Position /> */}
       {/* <Position1 /> */}
       {/* <PositionSticky /> */}
-      <PositionSticky1 />
+      {/* <PositionSticky1 /> */}
+      {/* <Flex1 /> */}
+      <FlexJustify />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
