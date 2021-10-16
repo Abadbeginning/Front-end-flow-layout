@@ -1,0 +1,29 @@
+.main {
+    width: 500px;
+    height: 500px;
+    background: skyblue;
+    display: flex;
+
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+
+    /* 当不折行的情况下，align-content是不会生效的 */
+    /* align-content: flex-end; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: space-evenly; */
+    /* 整体 */
+    /* align-content: stretch; */
+
+    /* 只针对单行 */
+    /* align-items: center; */
+
+}
+
+.main div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    font-size: 20px;
+    /* border: 2px black solid; */
+}
