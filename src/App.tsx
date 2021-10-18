@@ -16,6 +16,8 @@ import {Flex1} from './flex/4_2/1demo'
 import {FlexJustify} from './flex/4_4/1demo'
 import {FlexAlignContent} from './flex/4_5/1demo'
 import {FlexAlignItems} from './flex/4_5/2demo'
+import {Flex2} from './flex/4_6/1demo'
+import {Flex3} from './flex/4_6/2demo'
 
 function App() {
 
@@ -35,7 +37,9 @@ function App() {
       {/* <Flex1 /> */}
       {/* <FlexJustify /> */}
       {/* <FlexAlignContent /> */}
-      <FlexAlignItems />
+      {/* <FlexAlignItems /> */}
+      {/* <Flex2 /> */}
+      <Flex3 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
