@@ -21,6 +21,8 @@ import {Flex3} from './flex/4_6/2demo'
 import {Flex4} from './flex/4_7/1demo'
 import {Flex5} from './flex/4_8/1demo'
 import {Flex6} from './flex/4_8/2demo'
+import {Flex7} from './flex/4_9/1demo'
+import {Flex8} from './flex/4_9/2demo'
 
 function App() {
 
@@ -45,7 +47,9 @@ function App() {
       {/* <Flex3 /> */}
       {/* <Flex4 /> */}
       {/* <Flex5 /> */}
-      <Flex6 />
+      {/* <Flex6 /> */}
+      {/* <Flex7 /> */}
+      <Flex8 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
