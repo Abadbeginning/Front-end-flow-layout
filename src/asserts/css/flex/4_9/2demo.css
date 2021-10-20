@@ -5,6 +5,7 @@
     align-items: center;
 }
 
+/* margin-right 默认把其他元素到边上 中间留白 */
 .main div:nth-of-type(1){
     margin-right: auto;
 }
