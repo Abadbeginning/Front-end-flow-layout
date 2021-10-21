@@ -24,6 +24,7 @@ import {Flex6} from './flex/4_8/2demo'
 import {Flex7} from './flex/4_9/1demo'
 import {Flex8} from './flex/4_9/2demo'
 import {FlexGrow} from './flex/4_10/1demo'
+import {FlexShrink} from './flex/4_11/1demo'
 
 function App() {
 
@@ -51,7 +52,8 @@ function App() {
       {/* <Flex6 /> */}
       {/* <Flex7 /> */}
       {/* <Flex8 /> */}
-      <FlexGrow />
+      {/* <FlexGrow /> */}
+      <FlexShrink />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
