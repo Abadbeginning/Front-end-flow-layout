@@ -28,6 +28,7 @@ import {FlexShrink} from './flex/4_11/1demo'
 import {FlexBasis} from './flex/4_12/1demo'
 import {Flex} from './flex/4_12/2demo'
 import {FlexOrder} from './flex/4_12/3demo'
+import {FlexContour} from './flex/4_13/1demo'
 
 function App() {
 
@@ -59,7 +60,8 @@ function App() {
       {/* <FlexShrink /> */}
       {/* <FlexBasis /> */}
       {/* <Flex /> */}
-      <FlexOrder />
+      {/* <FlexOrder /> */}
+      <FlexContour />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
