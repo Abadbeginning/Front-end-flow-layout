@@ -1,0 +1,20 @@
+.main {
+    min-height: 100vh;
+    /* background: skyblue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.main .header {
+    height: 100px;
+    background: teal;
+}
+
+.main .content {
+    flex-grow: 1;
+}
+
+.main .footer {
+    height: 100px;
+    background: skyblue;
+}

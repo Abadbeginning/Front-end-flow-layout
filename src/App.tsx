@@ -30,6 +30,7 @@ import {Flex} from './flex/4_12/2demo'
 import {FlexOrder} from './flex/4_12/3demo'
 import {FlexContour} from './flex/4_13/1demo'
 import {FlexColom} from './flex/4_14/1demo'
+import {FlexStickyFooter} from './flex/4_15/1demo'
 
 function App() {
 
@@ -63,7 +64,8 @@ function App() {
       {/* <Flex /> */}
       {/* <FlexOrder /> */}
       {/* <FlexContour /> */}
-      <FlexColom />
+      {/* <FlexColom /> */}
+      <FlexStickyFooter />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
