@@ -33,6 +33,8 @@ import {FlexColom} from './flex/4_14/1demo'
 import {FlexStickyFooter} from './flex/4_15/1demo'
 import {FlexOverflow} from './flex/4_16/1demo'
 import {FlexCarousel} from './flex/4_17/1demo'
+import {Zhihu} from './flex/4_18/1demo'
+import {Zhihu1} from './flex/4_18/2demo'
 
 function App() {
 
@@ -69,7 +71,9 @@ function App() {
       {/* <FlexColom /> */}
       {/* <FlexStickyFooter /> */}
       {/* <FlexOverflow /> */}
-      <FlexCarousel />
+      {/* <FlexCarousel /> */}
+      {/* <Zhihu /> */}
+      <Zhihu1 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

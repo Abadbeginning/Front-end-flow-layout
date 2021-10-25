@@ -1,0 +1,120 @@
+/* .header {
+    background:#f6f6f6;
+} */
+.body {
+    background:#f6f6f6;
+}
+
+.header-container {
+    background: #f6f6f62c;
+    /* 固定位置 */
+    /* position: fixed;
+    top: 0; */
+    /* background: pink; */
+    /* 阴影更加好看 */
+    /* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影颜色 */
+    /* box-shadow: 0px 5px 52px black; */
+    /* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+    box-shadow:  0 0 5px 0 rgba(0, 0, 0, 0.1);
+    /* 覆盖 */
+    z-index: 100;
+}
+
+/* 
+    给容器最大最小宽度 
+    需要高度 
+    弹性 交叉轴居中
+*/
+.header-wrapper {
+    /* 得有高度 */
+    height: 52px;
+    min-width: 1000px;
+    max-width: 1156px;
+    /* 为了内容居中 两边留空 */
+    margin: 0 auto;
+    /* 弹性布局 且交叉轴居中 */
+    display: flex;
+    align-items: center;
+}
+
+/* 与右边保持一定间距 */
+.header-logo {
+    margin-right: 40px;
+}
+
+/* 给几个li元素弹性布局 在ul中加class 再套一层div就不管了 */
+.header-title {
+    display: flex;
+}
+
+/* 每个元素的大小 间距 */
+.header-title li {
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 搜索容器 自动扩充剩余空间 内容主轴居中  */
+.header-search {
+    display: flex;
+    flex-grow:1;
+    /* background: red; */
+    justify-content: center;
+}
+
+/* 
+    自动扩容 最大宽度482px 整个背景作为搜索框 border加弧度 加背景色  
+    因为有搜索框和搜索按钮 需要布局 紧贴两边 交叉轴居中
+*/
+.header-search-wrapper {
+    max-width: 482px;
+    height:34px;
+    display: flex;
+    background:#f6f6f6;
+    border-radius: 100px;
+    flex-grow:1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 无边框 背景色与父容器颜色一种 左右各20px */
+.header-search-wrapper input {
+    border: none;
+    background:#f6f6f6;
+    margin:0 20px;
+} 
+
+/* 左右各20px */
+.header-search-wrapper i {
+    margin:0 20px;
+}
+
+/* 弹性布局 */
+.header-btn {
+    display: flex;
+}
+
+/* 登陆按钮 设置大小 边框带有点弧度 间距 边框有色 里面字体有色 */
+.header-btn-login {
+    width: 60px;
+    height: 32px;
+    margin-left: 13px;
+    color: #0066ff;
+    border: 1px#0066ff solid;
+    border-radius: 3px;
+    /* 悬停手柄 */
+    cursor: pointer;
+}
+
+/* 设置宽高 间距 边框有弧度 无边框 */
+.header-btn-join {
+    width: 90px;
+    height: 32px;
+    margin-left: 13px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    background: #0066ff;
+    /* 悬停手柄 */
+    cursor: pointer;
+}
