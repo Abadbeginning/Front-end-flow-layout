@@ -35,6 +35,7 @@ import {FlexOverflow} from './flex/4_16/1demo'
 import {FlexCarousel} from './flex/4_17/1demo'
 import {Zhihu} from './flex/4_18/1demo'
 import {Zhihu1} from './flex/4_18/2demo'
+import {Grid1} from './grid/5_2/1'
 
 function App() {
 
@@ -73,7 +74,8 @@ function App() {
       {/* <FlexOverflow /> */}
       {/* <FlexCarousel /> */}
       {/* <Zhihu /> */}
-      <Zhihu1 />
+      {/* <Zhihu1 /> */}
+      <Grid1 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
