@@ -36,6 +36,8 @@ import {FlexCarousel} from './flex/4_17/1demo'
 import {Zhihu} from './flex/4_18/1demo'
 import {Zhihu1} from './flex/4_18/2demo'
 import {Grid1} from './grid/5_2/1'
+import {Grid2} from './grid/5_3/1'
+import {Grid3} from './grid/5_3/2'
 
 function App() {
 
@@ -75,7 +77,9 @@ function App() {
       {/* <FlexCarousel /> */}
       {/* <Zhihu /> */}
       {/* <Zhihu1 /> */}
-      <Grid1 />
+      {/* <Grid1 /> */}
+      {/* <Grid2 /> */}
+      <Grid3 />
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
