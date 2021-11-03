@@ -40,6 +40,7 @@ import {Grid2} from './grid/5_3/1'
 import {Grid3} from './grid/5_3/2'
 import {Grid4} from './grid/5_4/1'
 import {Grid5} from './grid/5_5/1'
+import {Grid6} from './grid/5_6/1'
 
 
 function App() {
@@ -84,7 +85,8 @@ function App() {
       {/* <Grid2 /> */}
       {/* <Grid3 /> */}
       {/* <Grid4 /> */}
-      <Grid5 />
+      {/* <Grid5 /> */}
+      <Grid6 />
       {/* <PersonalInfoComponent /> */}
       
       {/* <header className="App-header">
