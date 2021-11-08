@@ -10,7 +10,11 @@
 }
 
 .main div:nth-of-type(1) {
+    width: 50px;
+    height: 50px;
     background: pink;
+    justify-self: center;
+    align-self: center;
     /* grid-column-start: span 2; */
     /* grid-column-start: col2;
     grid-column-end: col4; */
@@ -24,8 +28,9 @@
     /* grid-row-start: 2; */
     /* grid-row-end: 4; */
 
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
+    /* grid-column: 2 / 3;
+    grid-row: 2 / 4; */
+    grid-area: 2 / 2 / 4 / 3;
 }
 
 .main div:nth-of-type(2) {
