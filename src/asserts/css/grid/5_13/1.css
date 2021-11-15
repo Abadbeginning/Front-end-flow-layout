@@ -1,0 +1,135 @@
+.top {
+    /* 设置宽度 顶部和底部 20px 左右居中 */
+    width:308px;
+    border:1px #dadadc solid;
+    margin:20px auto;
+}
+
+/* 目的 字体靠左 上下居中 */
+.top-title {
+    /* 高度 字体大小 粗细 弹性布局 垂直居中 水平居左 */
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* 网格展示内容 */
+.main {
+    height: 352px;
+    margin: 3px 14px;
+    display: grid;
+    grid-column: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "a1 a2 a2"
+        "a3 a2 a2"
+        "a4 a4 a5"
+        "a6 a7 a7"
+    ;
+    gap: 8px;
+    
+}
+
+/* .main div {
+    background: pink;
+} */
+
+.main a {
+    /* 撑开当前格 */
+    width: 100%;
+    height: 100%;
+    color: white;
+    /* 有p标签 */
+    display: block;
+    line-height: 30px;
+}
+
+.main h3 {
+   text-align: right;
+   margin-right: 4px; 
+}
+
+.main p {
+    text-align: center;
+}
+
+.main div:nth-of-type(1) {
+    grid-area: a1;
+}
+
+.main div:nth-of-type(2) {
+    grid-area: a2;
+}
+
+.main div:nth-of-type(3) {
+    grid-area: a3;
+}
+
+.main div:nth-of-type(4) {
+    grid-area: a4;
+}
+
+.main div:nth-of-type(5) {
+    grid-area: a5;
+}
+
+.main div:nth-of-type(6) {
+    grid-area: a6;
+}
+
+.main div:nth-of-type(7) {
+    grid-area: a7;
+}
+
+.top-page {
+    height:40px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-page a{
+    border: 1px #cbcbcb solid;
+    margin-left: 2px;
+    padding: 3px 4px;
+}
+
+.top-page span {
+    padding: 3px 4px;
+}
+
+.theme1{
+    background-image: linear-gradient(#187fe6, #32aff2);
+    border:1px #2a9adc solid;
+}
+.theme2{
+    background-image: linear-gradient(#f2246c, #fe5bac);
+    border:1px #da2061 solid;
+}
+.theme3{
+    background-image: linear-gradient(#d46300, #e5ad1c);
+    border:1px #cd9818 solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
