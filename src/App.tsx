@@ -53,6 +53,7 @@ import {Grid15} from './grid/5_13/1'
 import {Grid16} from './grid/5_14/1'
 import {Rem} from './rem/6-3/1'
 import {Rem1} from './rem/6-4/1'
+import {Rem2} from './rem/6-5/1'
 
 
 function App() {
@@ -110,7 +111,8 @@ function App() {
       {/* <Grid15 /> */}
       {/* <Grid16 /> */}
       {/* <Rem /> */}
-      <Rem1 />
+      {/* <Rem1 /> */}
+      <Rem2 />
       {/* <PersonalInfoComponent /> */}
       
       {/* <header className="App-header">
