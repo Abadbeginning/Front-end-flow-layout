@@ -11,7 +11,6 @@ export const Grid16 = () => {
                     <a href="#">电话卡</a>
                 </div>
                 <i className={"iconfont icon-right-arrow"}></i>
-
                 
             <ul className={"nav-menu"}>
                 <li>
@@ -227,6 +226,36 @@ export const Grid16 = () => {
                     <a href="#">平板</a>
                 </div>
                 <i className="iconfont icon-right-arrow"></i>
+                <ul className={"nav-menu"}>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                </ul>
             </li>
 
             <li>
@@ -235,6 +264,36 @@ export const Grid16 = () => {
                     <a href="#">电话卡</a>
                 </div>
                 <i className="iconfont icon-right-arrow"></i>
+                <ul className={"nav-menu"}>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src={Phone} alt="" />
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                </ul>
             </li>
 
         </ul>

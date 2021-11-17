@@ -1,6 +1,16 @@
 /* 
-    侧边栏 ==> 宽度
-    
+    用到的重要知识点 
+        相对定位 + 绝对定位 聚焦侧边栏每项内容时 右边内容紧贴侧边栏显示
+        只渲染子选择器第一项子元素的后代元素 不然很多样式会混
+        inherit继承
+        侧边栏聚焦 显示具体内容 网格显示 隐藏的妙用
+        内容列展示技巧 确定行数 确定列大小和默认列大小 
+        以列排列方式展示
+*/
+
+/* 
+    侧边导航栏
+    设宽度 整个视图高度 背景色
 */
 .nav {
     width:233px;
@@ -8,7 +18,13 @@
     background:rgba(0,0,0,0.5);
 }
 
-/*  */
+/* 
+    弹性布局(设高度 才生效 垂直居中 水平两侧分散)
+    字体颜色白色
+    填充 两边设置空白(不能margin 否则会撑开)
+    手型图标
+    相对位置(是为了旁边绝对位置的定位)
+*/
 .nav>li {
     display:flex;
     color: white;
@@ -20,19 +36,40 @@
     position: relative;
 }
 
+/* 
+    > 选择器 每个li标签下 只针对第一个子元素
+    继承颜色
+    右边距 4px(为两个a标签 比如手机 电话卡之间的间隔)
+*/
 .nav>li a{
     color:inherit;
     margin-right: 4px;
 }
 
+/* 
+    聚焦时 设置背景色
+*/
 .nav>li:hover {
     background:#ff6801;
 }
 
+/* 
+    当聚焦时 触发网格布局
+*/
 .nav>li:hover .nav-menu {
     display: grid;
 }
 
+/* 
+    绝对定位
+    顶部贴顶 居左100% (定位在侧边栏 距左 100% 也就是绝对定位在侧边栏的外边 不受宽度变化而影响)
+    布局为none 当侧边栏被聚焦时 才显示grid
+    设置高度
+    行6 自定分列 列数 305px
+    背景色 白色
+    加阴影 和 边框
+    加字体颜色
+*/
 .nav-menu {
     position: absolute;
     display: none;
@@ -49,11 +86,17 @@
     color: #36303c;
 }
 
+/* 
+    设置每格(文字 图片)水平居中
+*/
 .nav-menu>li{
     display: flex;
     align-items: center;
 }
 
+/* 
+    给图片居左 居右的距离
+*/
 .nav-menu>li>img{
     margin-left:26px;
     margin-right:21px;
