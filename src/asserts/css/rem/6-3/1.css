@@ -1,0 +1,21 @@
+/* rem = root + em */
+html {
+    font-size: 30px;
+}
+
+body {
+    font-size: 20px;
+}
+
+.box {
+    /* font-size: 30px; */
+    font-size: 2em;
+    /* width: 100px;
+    height: 100px; */
+    width: 2rem;
+    height: 2rem;
+    background: pink;
+    border: 2rem skyblue solid;
+    /* border: 2em skyblue solid; */
+}
+
