@@ -7,10 +7,20 @@ body{
     font-size: 16px;
 }
 
+/* 
+    设置a标签的颜色
+*/
 a{
     color: #34372e;
 }
 
+/* 
+    网易移动端头部实现
+    设置背景色 和高度
+    弹性布局 水平垂直居中
+    左右填充
+    字体白色
+*/
 .head {
     height: 43px;
     background: red;
@@ -21,10 +31,16 @@ a{
     color: white;
 }
 
+/* 
+    设置i标签大小
+*/
 .head i {
     font-size: 18px;
 }
 
+/* 
+    设置用户和email 大小和宽度比
+*/
 .head-user, .head-email{
     font-size: 14px;
     width: 25%;
@@ -34,23 +50,43 @@ a{
 
 }
 
+/* 
+    设置logo宽度和文字居中
+*/
 .head-logo {
     width: 50%;
     text-align: center;
 }
 
+/* 
+    设置图片高度
+*/
 .head-logo img {
     height: 20px;
 }
 
+/* 
+    文字向右
+*/
 .head-email {
     text-align: right;
 }
 
+/* 
+    email图标和文字间隔3px
+*/
 .head-email i:first-of-type {
     margin-right: 3px;
 }
 
+/* 
+    6-7 rem案例：网易移动端导航实现 
+        设置高度
+        弹性布局 垂直居中
+        左右填充10px
+        设置字体大小
+        底部加个边框线
+*/
 .nav {
     height: 46px;
     display: flex;
@@ -60,16 +96,28 @@ a{
     border-bottom: 1px #ededed solid;
 }
 
+/* 
+    设置a的相对位置
+    自动等比增长
+    文字居中
+*/
 .nav li {
     flex-grow: 1;
     text-align: center;
     position: relative;
 }
 
+/* a标签 字体变红 */
 .nav li.active a {
     color: #ef191b;
 }
 
+/* 
+    绝对定位
+    a标签的背景色的大小 设置为条状
+    after是在元素后面加内容 需要配置content
+    跳转到a标签的正下方
+ */
 .nav li.active::after {
     content: "";
     position: absolute;
