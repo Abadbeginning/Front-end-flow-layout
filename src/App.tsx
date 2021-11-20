@@ -45,7 +45,7 @@ import {Grid7} from './grid/5_7/1'
 import {Grid8} from './grid/5_7/2'
 import {Grid9} from './grid/5_8/1'
 import {Grid10} from './grid/5_8/2'
-import {Grid11} from './grid/5_9/1'
+import {Grid11} from './grid/5_9/1' 
 import {Grid12} from './grid/5_10/1'
 import {Grid13} from './grid/5_11/1'
 import {Grid14} from './grid/5_12/1'
@@ -54,6 +54,7 @@ import {Grid16} from './grid/5_14/1'
 import {Rem} from './rem/6-3/1'
 import {Rem1} from './rem/6-4/1'
 import {Rem2} from './rem/6-5/1'
+import {Rem3} from './rem/6-6/1'
 
 
 function App() {
@@ -112,7 +113,8 @@ function App() {
       {/* <Grid16 /> */}
       {/* <Rem /> */}
       {/* <Rem1 /> */}
-      <Rem2 />
+      {/* <Rem2 /> */}
+      <Rem3 />
       {/* <PersonalInfoComponent /> */}
       
       {/* <header className="App-header">
