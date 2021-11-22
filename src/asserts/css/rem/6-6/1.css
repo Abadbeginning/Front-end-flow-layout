@@ -124,6 +124,8 @@ a{
     background: #ef191b;
     width: 15px;
     height: 2px;
-    left: 40%;
+    margin-left: -9px;
+    left: 50%;
+    /* left: 40%; */
     bottom: -12px;
 }
