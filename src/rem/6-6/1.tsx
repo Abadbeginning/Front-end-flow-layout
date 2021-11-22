@@ -33,5 +33,52 @@ export const Rem3 = () => {
                 <a href="#">热点</a>
             </li>
         </ul>
+
+        <div className={"nav-news"}>
+            <ul className={"nav-news-list"}>
+            {/* <ul className={"nav-news-list nav-news__closed"}> */}
+                <li>
+                    <a href="#">新闻</a>
+                </li>
+                <li>
+                    <a href="#">抗疫</a>
+                </li>
+                <li>
+                    <a href="#">娱乐</a>
+                </li>
+                <li>
+                    <a href="#">体育</a>
+                </li>
+                <li>
+                    <a href="#">财经</a>
+                </li>
+                <li>
+                    <a href="#">图片</a>
+                </li>
+                <li>
+                    <a href="#">汽车</a>
+                </li>
+                <li>
+                    <a href="#">军事</a>
+                </li>
+                <li>
+                    <a href="#">直播</a>
+                </li>
+                <li>
+                    <a href="#">房产</a>
+                </li>
+                <li>
+                    <a href="#">科技</a>
+                </li>
+                <li>
+                    <a href="#">123</a>
+                </li>
+            </ul>
+
+            <div className="nav-sub-arrow">
+                <i className="iconfont icon-down-arrow"></i>
+            </div>
+        </div>
+
     </div>
 }
