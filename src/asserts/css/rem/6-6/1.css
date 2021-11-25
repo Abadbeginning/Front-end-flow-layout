@@ -180,20 +180,34 @@ a{
     transform: rotate(180deg);
 }
 
+/* 给内容一个左右内填充 不让两边靠边 */
 .news {
     padding: 0 10px;
 }
 
+/* 
+    给大标题设置字体大小
+    设置行高
+*/
 .news-title {
     font-size: 18px;
     height: 66px;
     line-height: 66px;
 }
 
+/* 
+    每项新闻内容给个距离
+*/
 .news-item {
     margin-bottom: 35px;
 }
 
+/* 
+    小标题字体的粗细 大小设置
+    行高设置
+    设置字长
+    向下距离
+*/
 .news-item-title {
     font-weight: 400;
     line-height: 22px;
@@ -202,7 +216,97 @@ a{
     margin-bottom: 8px;
 }
 
+/* 
+    设置小字体
+    灰色
+*/
 .news-item-info {
     font-size: 12px;
     color: #b3b4b6;
+}
+
+/* 
+    图片等比缩放
+    占比100%
+    向下5px
+*/
+.news-item-img img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* 
+    弹性布局
+    加边框线
+    内填充10px
+*/
+.news1-item {
+    display: flex;
+    border-top: 1rem #f6f7f9 solid;
+    padding: 10px;
+}
+
+/* 
+    宽度
+*/
+.news1-item-img {
+    width: 32%;
+    /* height: 50px; */
+}
+
+/* 
+    字体大小 粗细设置
+    行高
+    向下
+*/
+.news1-item-title {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+    margin-bottom: 8px;
+}
+
+/* 
+    撑满行剩余空间
+    与右边间距15px
+*/
+.news1-item-content {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+/* 
+
+    这里不仅要设100%宽度 高度也要设置 不然跟着行高走了
+    图片等比展示
+*/
+.news1-item-img img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+    内容提示内容 颜色灰 字体小 
+    弹性布局 垂直居中 水平两边排开
+*/
+.news1-item-content-info {
+    color: #b3b4b6;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 
+    给APP文字 添加粉色外边框 红字 
+    给边框加弧度
+    设置内填充
+*/
+.app {
+    color: #fb1515;
+    border: 1px #fbbab8 solid;
+    border-radius: 100px;
+    padding: 1px 4px;
 }

@@ -1,6 +1,9 @@
 import "../../asserts/css/rem/6-6/1.css"
 import "../../asserts/css/rem/6-6/iconfont.css"
 import Logo from "../../asserts/css/rem/6-6/img/logo.png"
+import News from "../../asserts/css/rem/6-6/img/news.jpg"
+import News2 from "../../asserts/css/rem/6-6/img/news2.jpg"
+import News3 from "../../asserts/css/rem/6-6/img/news3.jpg"
 
 export const Rem3 = () => {
     return <div>
@@ -83,18 +86,70 @@ export const Rem3 = () => {
         <div className={"news"}>
             <h3 className={"news-title"}>今日要闻</h3>
             <div className={"news-item"}>
-                <h2 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
-</h2>
+                <h3 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h3>
 <p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
             </div>
 
             <div className={"news-item"}>
-                <h2 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
-</h2>
+                <h3 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h3>
 <p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
             </div>
+            <div className={"news-item"}>
+                <h3 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h3>
+            <div className={"news-item-img"}>
+                <img src={News} alt="" />
+            </div>
+<p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
+            </div>
+            <div className={"news-item"}>
+                <h3 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h3>
+            <div className={"news-item-img"}>
+                <img src={News2} alt="" />
+            </div>
+<p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
+            </div>
+            <div className={"news-item"}>
+                <h3 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h3>
+            <div className={"news-item-img"}>
+                <img src={News3} alt="" />
+            </div>
+<p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
+            </div>
+        </div>
 
+        <div className={"news1"}>
+            <div className={"news1-item"}>
+                <div className={"news1-item-content"}>
+                    <h3 className={"news1-item-title"}>台湾确认参加拜登“民主峰会”，北京未受邀请，美中角力再掀波澜</h3>
+                    <div className={"news1-item-content-info"}>
+                        <span>上游新闻 2287跟帖</span>
+                        <span className={"app"}>打开 APP</span>
+                    </div>
+                </div>
 
+                <div className={"news1-item-img"}>
+                    <img src={News3} alt="" />
+                </div>
+            </div>
+
+            <div className={"news1-item"}>
+                <div className={"news1-item-content"}>
+                    <h3 className={"news1-item-title"}>台湾确认参加拜登“民主峰会”</h3>
+                    <div className={"news1-item-content-info"}>
+                        <span>上游新闻 2287跟帖</span>
+                        <span className={"app"}>打开 APP</span>
+                    </div>
+                </div>
+
+                <div className={"news1-item-img"}>
+                    <img src={News3} alt="" />
+                </div>
+            </div>
         </div>
     </div>
 }
