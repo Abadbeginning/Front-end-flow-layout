@@ -180,3 +180,29 @@ a{
     transform: rotate(180deg);
 }
 
+.news {
+    padding: 0 10px;
+}
+
+.news-title {
+    font-size: 18px;
+    height: 66px;
+    line-height: 66px;
+}
+
+.news-item {
+    margin-bottom: 35px;
+}
+
+.news-item-title {
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 17px;
+    width: 90%;
+    margin-bottom: 8px;
+}
+
+.news-item-info {
+    font-size: 12px;
+    color: #b3b4b6;
+}

@@ -80,5 +80,21 @@ export const Rem3 = () => {
             </div>
         </div>
 
+        <div className={"news"}>
+            <h3 className={"news-title"}>今日要闻</h3>
+            <div className={"news-item"}>
+                <h2 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h2>
+<p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
+            </div>
+
+            <div className={"news-item"}>
+                <h2 className={"news-item-title"}>中国节目在俄罗斯“火了” 这场论坛给出答案
+</h2>
+<p className={"news-item-info"}>央视网 1小时前 879跟帖</p>
+            </div>
+
+
+        </div>
     </div>
 }
