@@ -1,0 +1,50 @@
+a {
+    color: #4c514d;
+}
+
+.head {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.head-logo {
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.head-logo i {
+    color: #f47296;
+    font-size: 26px;
+}
+
+.head-search {
+    margin-right: 13px;
+}
+
+.head-search i {
+    font-size: 17px;
+    color: #c9c9c9;
+}
+
+.head-login {
+    margin-right: 13px;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.head-login a {
+    color: #f47296;
+}
+
+.head-app {
+    background: #f47296;
+}
+
+.head-app a {
+    color: white;
+}
+
