@@ -2,6 +2,10 @@ a {
     color: #4c514d;
 }
 
+/* 
+    头部
+        设置高度 弹性布局 垂直居中 左右填充10px
+*/
 .head {
     height: 40px;
     display: flex;
@@ -9,40 +13,66 @@ a {
     padding: 0 10px;
 }
 
+/* 
+    logo 左间距10px 右间距自动 默认将空白撑开
+*/
 .head-logo {
     margin-left: 10px;
     margin-right: auto;
 }
 
+/* 
+    设置logo颜色和大小
+*/
 .head-logo i {
     color: #f47296;
     font-size: 26px;
 }
 
+/* 
+    设置右间距
+*/
 .head-search {
     margin-right: 13px;
 }
 
+/* 
+    设置搜索图标大小和颜色
+*/
 .head-search i {
-    font-size: 18px;
+    font-size: 22px;
     color: #c9c9c9;
 }
 
+/* 
+    登陆图标 
+        设置右间距 背景色 
+        width + lineheight是为了文字垂直居中 方便写成一个圆形
+        设置弧度
+        文字大小
+        上下左右填充
+*/
 .head-login {
     margin-right: 13px;
     background-color: #e8e8e8;
-    height: 24px;
+    /* height: 24px; */
     line-height: 24px;
     width: 24px;
     border-radius: 50%;
     font-size: 12px;
-    padding: 3px;
+    padding: 5px;
 }
 
+/* 
+    登陆文字颜色
+*/
 .head-login a {
     color: #f47296;
 }
 
+/* 
+    下载 APP 设置文字大小 背景色 弧度 填充
+*/
 .head-app {
     font-size: 14px;
     background: #f47296;
@@ -50,7 +80,96 @@ a {
     padding: 5px 10px;
 }
 
+/* 
+    下载 APP 字体颜色
+*/
 .head-app a {
     color: white;
+}
+
+/* 
+    导航栏
+        设置高度
+        左右填充
+        下边框线
+        相对定位 ==> 是为了定位 下箭头
+*/
+.nav {
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: .5px solid #f3f3f3;
+    position: relative;
+}
+
+/* 
+    设置高度百分百
+    弹性布局 垂直居中
+    溢出隐藏
+*/
+.nav-list {
+    height:100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 
+    每个文字的宽度
+    右间距
+    不收缩
+    文字居中
+    相对定位 ==> 为了定位红色下边框
+*/
+.nav-list li {
+    width: 40px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+}
+
+/* 
+    选中文字字体的颜色
+*/
+.nav-list-active a {
+    color:#f47296;
+}
+
+/* 
+    选中文字下边框线设置
+        绝对定位
+        内容无
+        背景色红
+        设置宽高(大小)
+        left bottom 调节具体位置
+*/
+.nav-list-active::after {
+    position: absolute;
+    content: "";
+    background: #f47296;
+    width: 44px;
+    height: 2px;
+    left: -2px;
+    bottom: -10px;
+}
+
+/* 
+    下箭头
+        绝对定位
+        right top 调节具体位置
+        设置宽 高
+        背景色白
+        弹性布局 水平 垂直居中
+*/
+.nav-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
