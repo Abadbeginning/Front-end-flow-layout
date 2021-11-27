@@ -15,11 +15,11 @@ export const Rem5 = () => {
                 </div>
 
                 <div className={"head-login"}>
-                    <a href="#">登陆</a>
+                    <a href="#">登录</a>
                 </div>
 
                 <div className={"head-app"}>
-                    <a href="#">打开 APP</a>
+                    <a href="#">下载 APP</a>
                 </div>
             </div>
         </div>

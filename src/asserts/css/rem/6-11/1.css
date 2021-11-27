@@ -24,13 +24,16 @@ a {
 }
 
 .head-search i {
-    font-size: 17px;
+    font-size: 18px;
     color: #c9c9c9;
 }
 
 .head-login {
     margin-right: 13px;
     background-color: #e8e8e8;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
     border-radius: 50%;
     font-size: 12px;
     padding: 3px;
@@ -41,7 +44,10 @@ a {
 }
 
 .head-app {
+    font-size: 14px;
     background: #f47296;
+    border-radius: 4px;
+    padding: 5px 10px;
 }
 
 .head-app a {
