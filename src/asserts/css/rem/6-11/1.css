@@ -173,3 +173,38 @@ a {
     justify-content: center;
 }
 
+.video {
+    padding: 8px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    column-gap: 10px;
+}
+
+.video-item-pic {
+    display: grid;
+}
+
+.video-item-pic img {
+    grid-area: 1 / 1 / 1 / 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.video-item-pic span {
+    grid-area: 1 / 1 / 1 / 1;
+    /* align-self: flex-end; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 2px 3px;
+}
+
+.video-item-pic i {
+    margin-right: 3px;
+}
