@@ -5,20 +5,20 @@ a {
 
 /* 
     头部
-        设置高度 弹性布局 垂直居中 左右填充2.667vw
+        设置高度 弹性布局 垂直居中 左右填充10px
 */
 .head {
-    height: 10.667vw;
+    height: 40px;
     display: flex;
     align-items: center;
-    padding: 0 2.667vw;
+    padding: 0 10px;
 }
 
 /* 
-    logo 左间距2.667vw 右间距自动 默认将空白撑开
+    logo 左间距10px 右间距自动 默认将空白撑开
 */
 .head-logo {
-    /* margin-left: 2.667vw; */
+    margin-left: 10px;
     margin-right: auto;
 }
 
@@ -27,21 +27,21 @@ a {
 */
 .head-logo i {
     color: #f47296;
-    font-size: 6.933vw;
+    font-size: 26px;
 }
 
 /* 
     设置右间距
 */
 .head-search {
-    margin-right: 3.467vw;
+    margin-right: 13px;
 }
 
 /* 
     设置搜索图标大小和颜色
 */
 .head-search i {
-    font-size: 5.867vw;
+    font-size: 22px;
     color: #c9c9c9;
 }
 
@@ -54,14 +54,14 @@ a {
         上下左右填充
 */
 .head-login {
-    margin-right: 3.467vw;
+    margin-right: 13px;
     background-color: #e8e8e8;
-    /* height: 6.4vw; */
-    line-height: 6.4vw;
-    width: 6.4vw;
+    /* height: 24px; */
+    line-height: 24px;
+    width: 24px;
     border-radius: 50%;
-    font-size: 3.2vw;
-    padding: 1.333vw;
+    font-size: 12px;
+    padding: 5px;
 }
 
 /* 
@@ -75,10 +75,10 @@ a {
     下载 APP 设置文字大小 背景色 弧度 填充
 */
 .head-app {
-    font-size: 3.733vw;
+    font-size: 14px;
     background: #f47296;
-    border-radius: 1.067vw;
-    padding: 1.333vw 2.667vw;
+    border-radius: 4px;
+    padding: 5px 10px;
 }
 
 /* 
@@ -96,9 +96,9 @@ a {
         相对定位 ==> 是为了定位 下箭头
 */
 .nav {
-    height: 10.667vw;
-    padding: 0 2.667vw;
-    border-bottom: 0.133vw solid #f3f3f3;
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: .5px solid #f3f3f3;
     position: relative;
 }
 
@@ -122,8 +122,8 @@ a {
     相对定位 ==> 为了定位红色下边框
 */
 .nav-list li {
-    width: 10.667vw;
-    margin-right: 5.333vw;
+    width: 40px;
+    margin-right: 20px;
     flex-shrink: 0;
     text-align: center;
     position: relative;
@@ -148,10 +148,10 @@ a {
     position: absolute;
     content: "";
     background: #f47296;
-    width: 11.733vw;
-    height: 0.533vw;
-    left: -0.533vw;
-    bottom: -2.667vw;
+    width: 44px;
+    height: 2px;
+    left: -2px;
+    bottom: -10px;
 }
 
 /* 
@@ -166,7 +166,7 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-    width: 10.667vw;
+    width: 40px;
     height: 100%;
     background: white;
     display: flex;
@@ -174,59 +174,36 @@ a {
     justify-content: center;
 }
 
-/* 
-    视频展示区
-        上下左右填充
-        网格布局
-        2列 设置列与列之间的空隙
-*/
 .video {
-    padding: 2.133vw 2.667vw;
+    padding: 8px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
-    column-gap: 2.667vw;
+    column-gap: 10px;
 }
 
-/* 
-    还有为每个图片 前面添加播放量等文字 + 图标
-    给它们一个grid 在当前网格中(针对的每个图片 其实只有1个网格 1/1/1/1)
-*/
 .video-item-pic {
     display: grid;
 }
 
-/* 
-    网格分区
-        图片宽高占满
-    等比显示
-    带有一定的弧度
-*/
 .video-item-pic img {
     grid-area: 1 / 1 / 1 / 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1.333vw;
+    border-radius: 5px;
 }
 
-/* 
-    网格分区
-    添加左边距
-    弹性布局 将文字 + 图标(颜色白) 放到图片的正前下方
-    宽度94% 是为了左右的间距空的更好看
-    高度100%
-*/
 .video-item-pic span {
     grid-area: 1 / 1 / 1 / 1;
-    margin-left: 1.067vw;
+    margin-left: 4px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     color: white;
     width: 94%;
     height: 100%;
-    /* padding: 0 0.533vw; */
+    /* padding: 0 2px; */
 }
 
 /* .video-item-pic div {
@@ -238,26 +215,17 @@ a {
     color: white;
     width: 100%;
     height: 100%;
-    padding: 0 0.533vw 0.533vw 0.533vw;
+    padding: 0 2px 2px 2px;
 } */
 
-/* 
-    图片中 图表和文字添加间距
-*/
 .video-item-pic i {
-    margin-right: 1.067vw;
+    margin-right: 4px;
 }
-/* 
-    图片下面的标题
-        与图片的间距
-        与下面的间距
-        字体大小
-        设置行高 更加好看点
-*/
+
 .video-item-title {
-    margin-top: 2.4vw;
-    margin-bottom: 4vw;
-    font-size: 3.2vw;
+    margin-top: 9px;
+    margin-bottom: 15px;
+    font-size: 12px;
     /* font-weight: 500; */
-    line-height: 4.267vw;
+    line-height: 16px;
 }

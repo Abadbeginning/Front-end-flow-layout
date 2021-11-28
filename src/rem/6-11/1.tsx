@@ -72,10 +72,10 @@ export const Rem5 = () => {
                                 <i className="iconfont icon-703bofang-fangxing-xianxing"></i>
                                 73.7万
                             </div>
-                            <div>
+                            <div className={"video-item-info"}>
                                 <i className="iconfont icon-xinxi"></i>
-                                5591
-                            </div>    
+                                5592
+                            </div>
                         </span>
                     </div>
                     <h3 className="video-item-title">
@@ -162,7 +162,7 @@ export const Rem5 = () => {
                     <div className={"video-item-pic"}>
                         <img src={Video2} alt="" />
                         
-                        <span>
+                        <span >
                             <div>
                                 <i className="iconfont icon-703bofang-fangxing-xianxing"></i>
                                 73.7万
