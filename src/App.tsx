@@ -57,6 +57,7 @@ import {Rem2} from './rem/6-5/1'
 import {Rem3} from './rem/6-6/1'
 import {Rem4} from './rem/6-10/1'
 import {Rem5} from './rem/6-11/1'
+import {Media} from './chapter_7/7_2/1demo'
 
 
 function App() {
@@ -118,7 +119,8 @@ function App() {
       {/* <Rem2 /> */}
       {/* <Rem3 /> */}
       {/* <Rem4 /> */}
-      <Rem5 />
+      {/* <Rem5 /> */}
+      <Media />
       {/* <PersonalInfoComponent /> */}
       
       {/* <header className="App-header">
