@@ -1,0 +1,44 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+/* @media (min-width: 1000px) {
+    .box {
+
+        background: red;
+    }
+} */
+
+/* 如果多条件的时候，min-width编写顺序：从小到大进行适配 */
+/* min 翻译过来就是最小(小于) ＜ [最小值，。。。最大值] 后包含前面的值 */
+/* min-width方式：移动优先的原则，先编写端设备，然后响应式过度到pc端 */
+/* @media (min-width: 700px) {
+    .box {
+        background: pink;
+    }
+}
+
+@media (min-width: 1000px) {
+    .box {
+
+        background: red;
+    }
+} */
+
+
+/* 如何从pc端响应式过度到移动端 max-width 从大到小区分编写 */
+/* 最大多少 ＞ [最大值，。。。。最小值] */
+@media (max-width: 1000px) {
+    .box {
+
+        background: red;
+    }
+}
+
+@media (max-width: 700px) {
+    .box {
+        background: pink;
+    }
+}
