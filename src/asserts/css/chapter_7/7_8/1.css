@@ -1,0 +1,365 @@
+/* 设置页面的背景色 */
+.main {
+    background: #ebebeb;
+}
+
+/* 设置a标签的颜色 */
+a {
+    color: #505050;
+}
+
+/* logo 所占的高度 背景色 弹性布局 */
+.head {
+    height: 190px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 设置 logo宽度  */
+.head-logo {
+    width: 200px;
+}
+
+/* 导航栏 背景色、左右填充
+    、上边框和下边框的大小 颜色 */
+.nav {
+    border-top: 1px #ebebeb solid;
+    border-bottom: 2px #e1e1e1 solid;
+    background: white;
+    padding: 0 15px;
+}
+
+/* 
+    设置 切换导航栏的高度 以及弹性布局
+*/
+.nav-bar {
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+    设为手型
+*/
+.nav-bar i {
+    cursor: pointer;
+}
+
+/* 
+    默认导航栏内容不展示
+*/
+.nav-list {
+    display: none;
+}
+
+/* 
+    设置
+    行高(居中)
+    左右填充 很重要 
+    适配到pc端li标签之间的间距的
+    相对定位
+*/
+.nav-list li {
+    height: 56px;
+    line-height: 56px;
+    position: relative;
+    padding: 0 22px;
+}
+
+/* 
+
+    设置绝对位置
+    边框背景色 大小宽度
+    以及位置
+*/
+.nav-list li.active::after {
+    position: absolute;
+    content: "";
+    background: #e67e22;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    /* top: 56px; */
+    bottom: 0;
+}
+
+/* input:checked + ul {
+    display: block;
+} */
+
+/* 
+    点击导航栏按钮时 展示导航栏内容
+*/
+input:checked + .nav-list {
+    display: block;
+}
+
+/* 
+    隐藏 复选框
+*/
+.nav-toggle {
+    display: none;
+}
+
+/* 设置grid */
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* 
+    组合器选择前一个元素的直接子代的节点
+        表示带有以 attr 命名的属性，
+        且属性值至少包含一个 value 值的元素。
+*/
+/* .row > [className*="col"] { */
+.row > [className*="col"] {
+    grid-area: auto/auto/auto/span 12;
+}
+.row .col-1{
+    grid-area: auto/auto/auto/span 1;
+}
+.row .col-2{
+    grid-area: auto/auto/auto/span 2;
+}
+.row .col-3{
+    grid-area: auto/auto/auto/span 3;
+}
+.row .col-4{
+    grid-area: auto/auto/auto/span 4;
+}
+.row .col-5{
+    grid-area: auto/auto/auto/span 5;
+}
+.row .col-6{
+    grid-area: auto/auto/auto/span 6;
+}
+.row .col-7{
+    grid-area: auto/auto/auto/span 7;
+}
+.row .col-8{
+    grid-area: auto/auto/auto/span 8;
+}
+.row .col-9{
+    grid-area: auto/auto/auto/span 9;
+}
+.row .col-10{
+    grid-area: auto/auto/auto/span 10;
+}
+.row .col-11{
+    grid-area: auto/auto/auto/span 11;
+}
+.row .col-12{
+    grid-area: auto/auto/auto/span 12;
+}
+
+@media (min-width: 576px){
+    .row .col-sm-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-sm-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-sm-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-sm-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-sm-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-sm-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-sm-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-sm-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-sm-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-sm-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-sm-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-sm-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+/* 
+    等最小有768像素 隐藏导航切换按钮 导航栏内容弹性布局
+*/
+@media (min-width: 768px){
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row .col-md-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-md-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-md-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-md-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-md-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-md-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-md-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-md-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-md-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-md-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-md-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-md-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+@media (min-width: 992px){
+    .row .col-lg-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-lg-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-lg-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-lg-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-lg-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-lg-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-lg-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-lg-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-lg-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-lg-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-lg-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-lg-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+@media (min-width: 1200px){
+    .row .col-xl-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-xl-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-xl-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-xl-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-xl-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-xl-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-xl-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-xl-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-xl-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-xl-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-xl-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-xl-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+@media (min-width: 1400px){
+    .row .col-xxl-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-xxl-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-xxl-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-xxl-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-xxl-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-xxl-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-xxl-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-xxl-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-xxl-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-xxl-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-xxl-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-xxl-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
