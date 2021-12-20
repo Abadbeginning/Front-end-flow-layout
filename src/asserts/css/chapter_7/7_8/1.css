@@ -1,5 +1,6 @@
 :root{
     --container: 100%;
+    height: 100vh;
 }
 
 /* 设置页面的背景色 */
@@ -184,6 +185,80 @@ input:checked + .nav-list {
     margin-right: 10px;
 }
 
+/* 
+    设置侧边栏内容 背景色 上边距 内填充
+*/
+.main-aside {
+    background: white;
+    margin-top: 35px;
+    padding: 35px;
+}
+
+/* 
+    设置字体大小 粗细 下边距 下划线 相对定位
+*/
+.main-aside h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 1px #cccccc solid;
+    position: relative;
+}
+
+.main-aside h3::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #e67e22;
+}
+
+.main-aside p {
+    margin-top: 30px;
+}
+
+/* 
+    上边距 宽度占满 白子橘底 无边框
+    内填充
+*/
+.main-aside button {
+    margin-top: 30px;
+    width: 100%;
+    background: #e67e22;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 
+    上边距
+*/
+.main-aside div {
+    margin-top: 25px;
+}
+
+/* 
+    边框 布局 上右边距 内填充
+*/
+.main-aside div a {
+    border: 1px #ebebeb solid;
+    /* 可以左右 可上下 */
+    display: inline-block;
+
+    /* 容器会自动换行 */
+    /* display: block; */
+
+    /* 只能左右 */
+    /* display: inline; */
+    margin: 11px 7px 0 0;
+    padding: 5px 10px;
+}
+
+
+
 /* 设置grid */
 .row{
     display: grid;
@@ -195,8 +270,8 @@ input:checked + .nav-list {
         表示带有以 attr 命名的属性，
         且属性值至少包含一个 value 值的元素。
 */
-/* .row > [className*="col"] { */
-.row > [className*="col"] {
+/* .row > [class*="col"] { */
+.row > [class*="col"] {
     grid-area: auto/auto/auto/span 12;
 }
 
@@ -298,6 +373,10 @@ input:checked + .nav-list {
         --container: 700px;
     }
 
+    .row > [class*="col"] {
+        padding: 0 15px;
+    }
+
     .row .col-md-1{
         grid-area: auto/auto/auto/span 1;
     }
@@ -341,6 +420,11 @@ input:checked + .nav-list {
         --container: 940px;
     }
 
+    /* 与文章内容产生空隙 */
+    .row > [class*="col"] {
+        padding: 0 15px;
+    }
+
     .row .col-lg-1{
         grid-area: auto/auto/auto/span 1;
     }
@@ -382,6 +466,10 @@ input:checked + .nav-list {
 @media (min-width: 1200px){
     :root {
         --container: 1160px;
+    }
+
+    .row > [class*="col"] {
+        padding: 0 15px;
     }
 
     .row .col-xl-1{

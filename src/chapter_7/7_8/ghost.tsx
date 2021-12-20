@@ -148,12 +148,43 @@ export const Ghost = () => {
               <a href="#">Android</a>， 
               <a href="#">客户端</a>
             </section>
+          </div>       
+        </div>
+
+        <div className="col-12 col-sm-12 col-lg-4"> 
+          <div className="main-aside">
+            <h3>声明</h3>
+            <p>
+              Ghost 中文版不再继续维护，请去官方下载。
+            </p>
+          </div>
+
+          <div className="main-aside">
+            <h3>下载</h3>
+            <button>Ghost最新版</button>
+          </div>
+
+          <div className="main-aside">
+            <h3>标签云</h3>
+            <div>
+                <a href="#">客户端</a>
+                <a href="#">Android</a>
+                <a href="#">jQuery</a>
+                <a href="#">Ghost 0.7 版本</a>
+                <a href="#">开源</a>
+                <a href="#">助手函数</a>
+                <a href="#">客户端</a>
+                <a href="#">客户端</a>
+                <a href="#">Android</a>
+                <a href="#">jQuery</a>
+                <a href="#">Ghost 0.7 版本</a>
+                <a href="#">开源</a>
+                <a href="#">助手函数</a>
+                <a href="#">客户端</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="col-12 col-sm-12 col-lg-4"> 
-
-      </div>
   </div>
 }
