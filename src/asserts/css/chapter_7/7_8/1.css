@@ -1,5 +1,9 @@
+:root{
+    --container: 100%;
+}
+
 /* 设置页面的背景色 */
-.main {
+.ghost-container {
     background: #ebebeb;
 }
 
@@ -104,6 +108,82 @@ input:checked + .nav-list {
     display: none;
 }
 
+/* 
+    左右填充
+    自动居中
+    设置宽度
+    盒模型 不让其溢出
+*/
+.main {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: var(--container);
+    box-sizing: border-box;
+}
+
+/* 
+    设置上边距 背景色 填充 行高
+*/
+.main-list {
+    margin-top: 35px;
+    background: white;
+    padding: 35px;
+    line-height: 1.5;
+}
+
+/* 
+    标题 设置字体居中 大小 加粗 
+*/
+.main-list h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+/* 
+   设置文字居中 颜色   
+*/
+.main-list div {
+    text-align: center;
+    color: #959595;
+}
+
+/* 
+    设置上边距 字体大小
+*/
+.main-list p {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* 
+    上下边距 白字橘底 文字内填充 手型 无边框
+*/
+.main-list button {
+    margin: 30px 0;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background: #e67e22;
+}
+
+/* 
+    横线 上填充
+*/
+.main-list section {
+    border-top:1px #ebebeb solid;
+    padding-top: 20px;
+
+}
+
+/* 
+    右边距
+*/
+.main-list section i {
+    margin-right: 10px;
+}
+
 /* 设置grid */
 .row{
     display: grid;
@@ -119,6 +199,7 @@ input:checked + .nav-list {
 .row > [className*="col"] {
     grid-area: auto/auto/auto/span 12;
 }
+
 .row .col-1{
     grid-area: auto/auto/auto/span 1;
 }
@@ -157,6 +238,10 @@ input:checked + .nav-list {
 }
 
 @media (min-width: 576px){
+    :root {
+        --container: 500px;
+    }
+
     .row .col-sm-1{
         grid-area: auto/auto/auto/span 1;
     }
@@ -209,6 +294,10 @@ input:checked + .nav-list {
         align-items: center;
     }
 
+    :root {
+        --container: 700px;
+    }
+
     .row .col-md-1{
         grid-area: auto/auto/auto/span 1;
     }
@@ -248,6 +337,10 @@ input:checked + .nav-list {
 }
 
 @media (min-width: 992px){
+    :root {
+        --container: 940px;
+    }
+
     .row .col-lg-1{
         grid-area: auto/auto/auto/span 1;
     }
@@ -287,6 +380,10 @@ input:checked + .nav-list {
 }
 
 @media (min-width: 1200px){
+    :root {
+        --container: 1160px;
+    }
+
     .row .col-xl-1{
         grid-area: auto/auto/auto/span 1;
     }
@@ -363,3 +460,5 @@ input:checked + .nav-list {
         grid-area: auto/auto/auto/span 12;
     }
 }
+
+

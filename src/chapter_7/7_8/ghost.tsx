@@ -3,7 +3,7 @@ import "asserts/css/chapter_7/7_8/iconfont/iconfont.css"
 import Logo from "asserts/css/chapter_7/7_8/img/ghost-logo.png"
 
 export const Ghost = () => {
-  return <div className="main">
+  return <div className="ghost-container">
       {/* logo */}
       <div className="head">
         <img className="head-logo" src={Logo} alt="" />
@@ -24,6 +24,136 @@ export const Ghost = () => {
                 <li><a href="#">中文文档</a></li>
                 <li><a href="#">关于</a></li>
             </ul>
+      </div>
+
+      {/* 文章内容 */}
+      <div className="main row">
+        <div className="col-12 col-sm-12 col-lg-8"> 
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>，
+              <a href="#">客户端</a>
+            </section>
+          </div>
+          <div className="main-list">
+            <h2>全新的 Ghost 文档上线</h2>
+            <div>
+              <span>作者：王思文</span> • <span>2021年12月20日</span>
+            </div>
+            <p>
+              我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+            </p>
+            <button type="button">阅读全文</button>
+            <section>
+              <i className="iconfont icon-wenjianjia"></i>
+              <a href="#">Android</a>， 
+              <a href="#">客户端</a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-12 col-sm-12 col-lg-4"> 
+
       </div>
   </div>
 }
