@@ -63,6 +63,7 @@ import {Media2} from './chapter_7/7_4/1demo'
 import {Media3} from './chapter_7/7_5/1demo'
 import {Media4} from './chapter_7/7_6/1demo'
 import {Ghost} from './chapter_7/7_8/ghost'
+import {AntPro} from './chapter_8/8-2/1demo'
 
 
 function App() {
@@ -130,7 +131,8 @@ function App() {
       {/* <Media2 /> */}
       {/* <Media3 /> */}
       {/* <Media4 /> */}
-      <Ghost />
+      {/* <Ghost /> */}
+      <AntPro />
       {/* <PersonalInfoComponent /> */}
       
       {/* <header className="App-header">
