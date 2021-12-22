@@ -278,14 +278,17 @@ button:-moz-focusring,
 }
 
 
-.g-ant__sider__wrap {
+.g-ant-sider__wrap {
     color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 
 
 */
-.g-ant__sider__wrap--fixed {
+.g-ant-sider__wrap--fixed {
     position: fixed;
     left: 0;
     top: 0;
@@ -293,8 +296,59 @@ button:-moz-focusring,
     overflow: hidden;
 }
 
-/* --------------------------通用模块(m-)------------------------ */
+.g-ant-sider__head {
+    flex-shrink: 0;
+    /* height: 40px;
+    align-items: center; */
+}
 
+.g-ant-sider__main {
+    
+    flex-grow: 1;
+}
+
+.g-ant-sider__foot {
+    flex-shrink: 0;
+}
+
+/* --------------------------通用模块(m-)------------------------ */
+.m-logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 16px;
+}
+
+.m-logo > img {
+    width: 32px;
+    
+}
+
+.m-logo > h2 {
+    margin-left: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.m-menu {
+
+}
+
+.m-menu__title {
+
+}
+
+.m-menu__sub {
+
+}
+
+.m-menu__sub--selected {
+
+}
+
+.g-ant-sider__foot {
+
+}
 
 
 /* --------------------------通用元件(u-)------------------------ */
