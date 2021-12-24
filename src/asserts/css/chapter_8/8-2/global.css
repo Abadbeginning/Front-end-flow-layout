@@ -362,6 +362,14 @@ button:-moz-focusring,
     margin-right: auto;
 }
 
+.m-menu--selected .m-menu__title {
+    color: white;
+}
+
+.m-menu--selected .m-menu__sub {
+    display: block;
+}
+
 .m-menu__sub {
     display: none;
 }

@@ -2,8 +2,16 @@ import "asserts/css/chapter_8/8-2/global.css"
 import "asserts/css/chapter_8/8-2/index.css"
 import "asserts/css/chapter_8/iconfont/iconfont.css"
 import Logo from "asserts/css/chapter_8/static/logo.svg"
+import React, { useEffect } from "react"
 
 export const AntPro = () => {
+  useEffect(() => {
+    // liEventListener()
+    getOnclick()
+   
+    
+  })
+
   return <div>
     <div className={"g-ant"}>
       <div className="g-ant__sider">
@@ -19,6 +27,7 @@ export const AntPro = () => {
 
            <ul className="g-ant-sider__main">
              {/* 是否被选中 */}
+              {/* <li className="m-menu m-menu--selected"> */}
               <li className="m-menu m-menu--selected">
                 <div className="m-menu__title">
                   <i className="iconfont icon-car"></i>
@@ -197,4 +206,69 @@ export const AntPro = () => {
       </div> */}
     </div>
   </div>
+}
+
+const liEventListener = () => {
+    var ul = document.querySelector(".g-ant-sider__main")
+    console.log(ul);
+    ul?.addEventListener("click", (e) => {
+        console.log(e);
+    })
+    
+} 
+
+const getOnclick = () => {
+      // 收集侧边栏所有一级菜单    
+      var menuTitles = document.querySelectorAll(".m-menu__title")
+    //   console.log(menu);
+     // 监听哪个菜单被点击了
+     menuTitles.forEach(element => {
+        //  console.log(element);
+        element.addEventListener("click", (e) => {
+            // console.log(e);
+            var menu = element?.parentElement
+            // console.log(element?.parentElement);
+            menu?.classList.toggle("m-menu--selected")
+
+            if (menu?.className.includes("m-menu--selected")) {
+                //打开状态
+                var arrow = element.querySelector('[class*="icon-arrow"]');
+                if (arrow?.className) {
+                    arrow.className = 'iconfont icon-arrowup';
+                }
+                console.log("arrow ==>",arrow?.className);
+
+            } else {
+                //关闭状态
+                var arrow = element.querySelector('[class*="icon-arrow"]');
+                // console.log("arrow ==>",arrow?.className);
+                // arrow = "<i className='iconfont icon-arrowdown'></i>";
+                if (arrow?.className) {
+                    arrow.className = 'iconfont icon-arrowdown';
+                }
+                console.log("arrow ==>",arrow?.className);
+                // arrow.className = 'iconfont icon-arrowdown';
+            }
+            
+        })
+
+         
+     });
+    // var menuTitles = document.querySelectorAll('.m-menu__title');
+    //     for(var i=0;i<menuTitles.length;i++){
+    //         menuTitles[i].onclick = function(){
+    //             var menu = this.parentElement;
+    //             menu.classList.toggle('m-menu--selected');
+    //             if( menu.className.includes('m-menu--selected') ){
+    //                 //打开状态
+    //                 var arrow = this.querySelector('[class*="icon-arrow"]');
+    //                 arrow.className = 'iconfont icon-arrowup';
+    //             }
+    //             else{
+    //                 //关闭状态
+    //                 var arrow = this.querySelector('[class*="icon-arrow"]');
+    //                 arrow.className = 'iconfont icon-arrowdown';
+    //             }
+    //         };
+    //     }
 }
