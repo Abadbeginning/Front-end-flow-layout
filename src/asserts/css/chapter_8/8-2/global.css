@@ -272,6 +272,18 @@ button:-moz-focusring,
     overflow: hidden;
 }
 
+.g-ant__sider--closed .m-logo {
+    padding: 16px 8px;
+}
+
+.g-ant__sider--closed .m-menu {
+    transform: scale(1.5);
+}
+
+.g-ant__sider--closed .m-menu__sub {
+    display: none;
+}
+
 /* 默认撑开 */
 .g-ant__main {
     flex-grow: 1;
@@ -304,7 +316,8 @@ button:-moz-focusring,
 
 .g-ant-sider__main {
     flex-grow: 1;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    overflow: hidden auto;
 }
 
 .g-ant-sider__foot {

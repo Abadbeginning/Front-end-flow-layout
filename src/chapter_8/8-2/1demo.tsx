@@ -7,8 +7,9 @@ import React, { useEffect } from "react"
 export const AntPro = () => {
   useEffect(() => {
     // liEventListener()
+    // 监听侧边栏点击事件
     getOnclick()
-   
+    barOnclick()
     
   })
 
@@ -208,12 +209,43 @@ export const AntPro = () => {
   </div>
 }
 
+const barOnclick = () => {
+    var bar = document.querySelector(".u-bar")
+    var sider = document.querySelector(".g-ant__sider")
+    var menus = document.querySelectorAll('.m-menu');
+
+    bar?.addEventListener("click", (e) => {
+        sider?.classList.toggle("g-ant__sider--closed")
+        
+        menus.forEach(element => {
+            element.classList.remove("m-menu--selected")
+            var arrow = element.querySelector('[class*="icon-arrow"]');
+            if (arrow?.className) {
+                arrow.className = 'iconfont icon-arrowdown';
+            }
+        });
+    })
+}
+
 const liEventListener = () => {
     var ul = document.querySelector(".g-ant-sider__main")
-    console.log(ul);
-    ul?.addEventListener("click", (e) => {
-        console.log(e);
-    })
+    // console.log(ul?.children);
+    var child = ul?.children;
+
+    console.log("ul?.childNodes ==>", ul);
+    
+    ul?.childNodes.forEach(element => {
+        element.addEventListener("click", (e) => {
+            // console.log(element);
+            console.log(element);
+        })
+    });
+
+    // ul?.addEventListener("click", (e) => {
+    //     if (e.target) {
+    //         console.log("target ==》",e.target);
+    //     }
+    // })
     
 } 
 
@@ -228,6 +260,8 @@ const getOnclick = () => {
             // console.log(e);
             var menu = element?.parentElement
             // console.log(element?.parentElement);
+            // console.log("menu ==>", menu);
+            
             menu?.classList.toggle("m-menu--selected")
 
             if (menu?.className.includes("m-menu--selected")) {
