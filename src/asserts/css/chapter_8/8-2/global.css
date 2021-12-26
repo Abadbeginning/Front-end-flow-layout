@@ -264,7 +264,6 @@ button:-moz-focusring,
     background: #00152a;
     width: 208px;
     min-height: 100vh;
-
 }
 
 .g-ant__sider--closed {
@@ -280,8 +279,34 @@ button:-moz-focusring,
     transform: scale(1.5);
 }
 
+.g-ant__sider--closed .m-menu__title:hover {
+    background:#ff6801;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.g-ant__sider--closed .m-menu__title:hover .m-menu__sub{
+    display: grid;
+}
+
 .g-ant__sider--closed .m-menu__sub {
     display: none;
+    position: absolute;
+    top:0;
+    left: 100%;
+    /* right:0; */
+    height: 200px;
+    /* display: grid; */
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 160px;
+    grid-auto-flow: column;
+    /* display: block; */
+    grid-auto-columns: 160px;
+    background:white;
+    border:1px #e1e1e1 solid;
+    box-shadow: 5px 5px 10px #ccc;
+    color: #36303c;
 }
 
 /* 默认撑开 */
@@ -318,6 +343,7 @@ button:-moz-focusring,
     flex-grow: 1;
     /* overflow-y: auto; */
     overflow: hidden auto;
+    position: relative;
 }
 
 .g-ant-sider__foot {
