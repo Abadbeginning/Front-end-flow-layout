@@ -1,10 +1,10 @@
 .index-main {
-    display: grid;
+    display              : grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 285px);
-    gap: 24px;
-    margin: 24px;
-    grid-template-areas: 
+    grid-template-rows   : repeat(3, 285px);
+    gap                  : 24px;
+    margin               : 24px;
+    grid-template-areas  :
         "a1 a1 a1 a2"
         "a1 a1 a1 a3"
         "a4 a4 a5 a6";
@@ -34,18 +34,17 @@
     grid-area: a6;
 }
 
-
 .index-main__bg1,
 .index-main__bg2,
 .index-main__bg3,
 .index-main__bg4,
 .index-main__bg5,
 .index-main__bg6 {
-    background-repeat: no-repeat;
+    background-repeat  : no-repeat;
     background-position: center center;
-    background-size: contain;
-    width: 100%;
-    height: 100%;
+    background-size    : contain;
+    width              : 100%;
+    height             : 100%;
 }
 
 .index-main__bg1 {
