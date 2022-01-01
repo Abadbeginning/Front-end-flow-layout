@@ -1,7 +1,13 @@
 import "asserts/css/chapter_8/8-3/global.css"
-import "asserts/css/chapter_8/8-2/index.css"
+import "asserts/css/chapter_8/8-3/index.css"
 import "asserts/css/chapter_8/iconfont/iconfont.css"
 import Logo from "asserts/css/chapter_8/static/logo.svg"
+import Index1 from "asserts/css/chapter_8/static/index-1.jpg"
+import Index2 from "asserts/css/chapter_8/static/index-2.jpg"
+import Index3 from "asserts/css/chapter_8/static/index-3.jpg"
+import Index4 from "asserts/css/chapter_8/static/index-4.jpg"
+import Index5 from "asserts/css/chapter_8/static/index-5.jpg"
+import Index6 from "asserts/css/chapter_8/static/index-6.jpg"
 import React, { useEffect } from "react"
 
 export const AntPro1 = () => {
@@ -141,7 +147,65 @@ export const AntPro1 = () => {
             <span>adimn</span>
             <i className="iconfont icon-error"></i>
         </div>
-        <div className="g-ant__main__main"></div>
+        
+        <div className="g-ant__main__main">
+            <div className="index-main">
+                <div className="m-card">
+                    <div className="m-card__title">
+                        活动实时交易情况
+                    </div>
+                    <div className="m-card__body">
+                        <div className="index-main__bg1"></div>
+                    </div>
+                </div>
+                
+                <div className="m-card">
+                    <div className="m-card__title">
+                        活动情况预测
+                    </div>
+                    <div className="m-card__body">
+                        <div className="index-main__bg2"></div>
+                    </div>
+                </div>
+                
+                <div className="m-card">
+                    <div className="m-card__title">
+                        券核效率
+                    </div>
+                    <div className="m-card__body">
+                        <div className="index-main__bg3"></div>
+                    </div>
+                </div>
+
+                <div className="m-card">
+                    <div className="m-card__title">
+                        活动实时交易情况
+                    </div>
+                    <div className="m-card__body">
+                        <div className="index-main__bg4"></div>
+                    </div>
+                </div>
+
+                <div className="m-card">
+                    <div className="m-card__title">
+                        活动实时交易情况
+                    </div>
+                    <div className="m-card__body">
+                        <div className="index-main__bg5"></div>
+                    </div>
+                </div>
+
+                <div className="m-card">
+                    <div className="m-card__title">
+                        活动实时交易情况
+                    </div>
+                    <div className="m-card__body">
+                        <div className="index-main__bg6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div className="g-ant__main__foot">
             <p>
                 <a href="#">Ant Design Pro</a>
