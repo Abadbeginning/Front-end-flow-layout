@@ -252,6 +252,11 @@ button:-moz-focusring,
     display: none !important;
 }
 
+
+:root {
+    --theme: #1890ff;
+}
+
 /* --------------------------通用布局(g-)------------------------ */
 /* 弹性布局 */
 .g-ant {
@@ -431,7 +436,8 @@ button:-moz-focusring,
 }
 
 .m-menu__sub--selected {
-    background: #1890ff;
+    /* background: #1890ff; */
+    background: var(--theme);
     color: white;
 }
 
@@ -459,6 +465,49 @@ button:-moz-focusring,
     padding: 20px;
 }
 
+.m-setting {
+    width     : 300px;
+    height    : 100vh;
+    background: white;
+    position  : fixed;
+    right     : 0px;
+    top       : 0;
+    padding   : 0 15px;
+    box-sizing: border-box;
+}
+
+.m-setting__bar {
+    width          : 48px;
+    height         : 48px;
+    background     : var(--theme);
+    border-radius: 2px;
+    position: absolute;
+    /* position: relative; */
+    /* 自身的宽度 */
+    left: -48px;
+    /* 计算 ==> 自身的高度 减去 自身一半的高度 */
+    top: calc(50% - 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor         : pointer;
+}
+
+.m-setting__bar > i {
+    font-size: 22px;
+}
+
+.m-setting__item {
+    margin: 50px 0;
+}
+
+.m-setting-item__theme {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .g-ant-sider__foot {
 
 }
@@ -467,6 +516,62 @@ button:-moz-focusring,
 /* --------------------------通用元件(u-)------------------------ */
 .u-bar {
     padding: 15px;
+}
+
+.u-foxiaolan,
+.u-bomu,
+.u-huoshan,
+.u-rimu,
+.u-mingqing,
+.u-jiguanglv,
+.u-jikelan,
+.u-jiangzi {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.u-foxiaolan {
+    background: #188efc;
+}
+
+.u-bomu {
+    background: #f5212d;
+}
+
+.u-huoshan {
+    background: #fe531f;
+}
+
+.u-rimu {
+    background: #fbae14;
+}
+
+.u-mingqing {
+    background: #14c2c3;
+}
+
+.u-jiguanglv {
+    background: #53c41a;
+}
+
+.u-jikelan {
+    background: #2f54eb;
+}
+
+.u-jiangzi {
+    background: #722ed1;
+}
+
+.u-divider {
+    width: 100%;
+    height: 1px;
+    background: #f0f0f0;
+    margin: 15px 0;
 }
 
 /* --------------------------响应式系统------------------------ */

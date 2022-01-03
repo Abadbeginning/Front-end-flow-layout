@@ -222,6 +222,29 @@ export const AntPro1 = () => {
 
       </div> */}
     </div>
+    
+    {/* 右侧设置侧边栏 */}
+    <div className="m-setting">
+        <div className="m-setting__bar">
+            <i className="iconfont icon-setting"></i>
+        </div>
+
+        <div className="m-setting__item">
+            <h3>主题色</h3>
+            <ul className="m-setting-item__theme">
+                <li className="u-foxiaolan"><i className="iconfont icon-check"></i></li>
+                <li className="u-bomu"></li>
+                <li className="u-huoshan"></li>
+                <li className="u-rimu"></li>
+                <li className="u-mingqing"></li>
+                <li className="u-jiguanglv"></li>
+                <li className="u-jikelan"></li>
+                <li className="u-jiangzi"></li>
+            </ul>
+        </div>
+
+        <div className="u-divider"></div>
+    </div>
   </div>
 }
 
