@@ -16,6 +16,7 @@ export const AntPro1 = () => {
     // 监听侧边栏点击事件
     getOnclick()
     barOnclick()
+    selectStatus()
     
   })
 
@@ -244,6 +245,44 @@ export const AntPro1 = () => {
         </div>
 
         <div className="u-divider"></div>
+
+        <div className="m-setting__item">
+            <h3>固定内容</h3>
+            <ul className="m-setting-item__toggle">
+                <li>
+                    <span>内容头部</span>
+                    <div className="u-switch j-head--show">
+                        <div className="u-switch__handle"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>侧边菜单</span>
+                    <div className="u-switch j-head--show">
+                        <div className="u-switch__handle"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div className="u-divider"></div>
+
+        <div className="m-setting__item">
+            <h3>显示内容</h3>
+            <ul className="m-setting-item__toggle">
+                <li>
+                    <span>内容头部</span>
+                    <div className="u-switch j-head--show">
+                        <div className="u-switch__handle"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>侧边菜单</span>
+                    <div className="u-switch j-sider--show">
+                        <div className="u-switch__handle"></div>
+                    </div> 
+                </li>
+            </ul>
+        </div>
     </div>
   </div>
 }
