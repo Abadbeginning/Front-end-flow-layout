@@ -319,14 +319,15 @@ const liEventListener = () => {
         })
     });
 
-    // ul?.addEventListener("click", (e) => {
-    //     if (e.target) {
-    //         console.log("target ==》",e.target);
-    //     }
-    // })
     
-} 
-
+    // ul?.addEventListener("click", (e) => {
+        //     if (e.target) {
+        //         console.log("target ==》",e.target);
+        //     }
+        // })
+        
+    } 
+        
 const getOnclick = () => {
       // 收集侧边栏所有一级菜单    
       var menuTitles = document.querySelectorAll(".m-menu__title")
@@ -366,6 +367,7 @@ const getOnclick = () => {
 
          
      });
+     
     // var menuTitles = document.querySelectorAll('.m-menu__title');
     //     for(var i=0;i<menuTitles.length;i++){
     //         menuTitles[i].onclick = function(){
@@ -383,4 +385,40 @@ const getOnclick = () => {
     //             }
     //         };
     //     }
+}
+
+const selectStatus = () => {
+    // 获取类 m-setting m-setting__bar 右侧界面和按钮
+    var m_set = document.querySelector(".m-setting")
+    var m_bar = document.querySelector(".m-setting__bar")
+    var bar_i = document.querySelector(".m-setting__bar i")
+    var themes = document.querySelectorAll('.m-setting-item__theme>li');
+
+    m_bar?.addEventListener("click", () => {
+        m_set?.classList.toggle("m-setting--open")
+        if (m_set?.className.includes("m-setting--open")) {
+            if (bar_i?.className) {
+                bar_i.className = "iconfont icon-close";
+            }
+        } else {
+            if (bar_i?.className) {
+                bar_i.className = "iconfont icon-setting";
+            }
+        }
+    })
+
+    for(var i=0;i<themes.length;i++){
+        themes[i].addEventListener("click", () => {
+            for(var i=0;i<themes.length;i++){
+                themes[i].innerHTML = '';
+            }
+
+            themes[i].innerHTML = '<i class="iconfont icon-check"></i>';
+            var color = getComputedStyle(themes[i]).backgroundColor;
+            document.documentElement.style.setProperty('--theme', color);
+        })
+    }
+
+
+
 }

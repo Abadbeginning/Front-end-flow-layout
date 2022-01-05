@@ -470,14 +470,16 @@ button:-moz-focusring,
     height    : 100vh;
     background: white;
     position  : fixed;
-    /* right     : -300px; */
-    right     : 0px;
+    right     : -300px;
+    /* right     : 0px; */
     top       : 0;
     padding   : 0 15px;
     box-sizing: border-box;
 }
 
-
+.m-setting--open {
+    right     : 0px;
+}
 
 .m-setting__bar {
     width          : 48px;
