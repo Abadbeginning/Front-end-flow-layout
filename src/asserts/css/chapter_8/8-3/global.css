@@ -409,6 +409,20 @@ button:-moz-focusring,
     flex-shrink: 0;
 }
 
+/* 自动左对齐 默认不显示 垂直居中 */
+.m-logo1 {
+    display: none;
+    align-items: center;
+    /* 元素向左 */
+    margin-right: auto;
+    /* margin-left: auto; */
+    /* color: white; */
+}
+
+.m-logo1 > img {
+    width: 32px;
+}
+
 .m-menu {
     color: #8c959e;
 }
@@ -644,3 +658,18 @@ button:-moz-focusring,
 }
 
 /* --------------------------响应式系统------------------------ */
+
+@media(max-width:1400px){}
+@media(max-width:1200px){}
+@media(max-width:992px){
+    .m-logo1 {
+        display: flex;
+    }
+
+    .g-ant__sider {
+        display: none;
+        
+    }
+}
+@media(max-width:768px){}
+@media(max-width:576px){}

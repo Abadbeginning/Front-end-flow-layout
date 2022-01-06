@@ -139,8 +139,14 @@ export const AntPro1 = () => {
         </div>
       </div>
 
+      <div className="u-mask"></div>
+
       <div className="g-ant__main">
         <div className="g-ant__main__head g-ant-main__head--fixed">
+            <div className="m-logo1">
+                <img src={Logo} alt="" />
+                <i className="iconfont icon-outdent u-bar"></i>
+            </div>
             <i className="iconfont icon-idcard"></i>
             <i className="iconfont icon-check-circle"></i>
             <i className="iconfont icon-read"></i>
