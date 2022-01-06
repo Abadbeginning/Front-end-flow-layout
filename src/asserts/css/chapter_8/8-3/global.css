@@ -269,13 +269,15 @@ button:-moz-focusring,
     background: #00152a;
     width: 208px;
     min-height: 100vh;
-
+    z-index: 3;
 }
 
 .g-ant__sider--closed {
     width: 48px;
     overflow: hidden;
 }
+
+
 
 .g-ant__sider--closed .m-logo {
     padding: 16px 8px;
@@ -306,6 +308,18 @@ button:-moz-focusring,
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0 20px;
     column-gap: 20px;
+}
+
+.g-ant-main__head--fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.g-ant-main__head--fixed + .g-ant__main__main {
+    margin-top: 48px;
+
 }
 
 .g-ant__main__head > span {
@@ -597,6 +611,14 @@ button:-moz-focusring,
     border-radius: 100px;
     background: var(--theme);
     cursor: pointer;
+}
+
+.u-switch--closed {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.u-switch--closed .u-switch__handle {
+    left: 14px;
 }
 
 .u-switch__handle {

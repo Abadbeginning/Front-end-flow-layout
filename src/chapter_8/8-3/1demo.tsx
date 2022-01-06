@@ -17,7 +17,7 @@ export const AntPro1 = () => {
     getOnclick()
     barOnclick()
     selectStatus()
-    
+    webFixAndShow()
   })
 
   return <div>
@@ -140,7 +140,7 @@ export const AntPro1 = () => {
       </div>
 
       <div className="g-ant__main">
-        <div className="g-ant__main__head">
+        <div className="g-ant__main__head g-ant-main__head--fixed">
             <i className="iconfont icon-idcard"></i>
             <i className="iconfont icon-check-circle"></i>
             <i className="iconfont icon-read"></i>
@@ -251,13 +251,13 @@ export const AntPro1 = () => {
             <ul className="m-setting-item__toggle">
                 <li>
                     <span>内容头部</span>
-                    <div className="u-switch j-head--show">
+                    <div className="u-switch j-head--fixed">
                         <div className="u-switch__handle"></div>
                     </div>
                 </li>
                 <li>
                     <span>侧边菜单</span>
-                    <div className="u-switch j-head--show">
+                    <div className="u-switch j-sider--fixed">
                         <div className="u-switch__handle"></div>
                     </div>
                 </li>
@@ -423,4 +423,33 @@ const selectStatus = () => {
 
 
 
+}
+
+const webFixAndShow = () => {
+    // j-head--fixed
+    var head_fixed = document.querySelector(".j-head--fixed")
+    var sider_fixed = document.querySelector(".j-sider--fixed")
+    var head_show = document.querySelector(".j-head--show")
+    var sider_show = document.querySelector(".j-sider--show")
+    var main_head = document.querySelector(".g-ant__main__head")
+
+    head_fixed?.addEventListener("click", () => {
+        head_fixed?.classList.toggle("u-switch--closed")
+        main_head?.classList.toggle("g-ant-main__head--fixed")
+    })
+
+    sider_fixed?.addEventListener("click", () => {
+        sider_fixed?.classList.toggle("u-switch--closed")
+        
+    })
+
+    head_show?.addEventListener("click", () => {
+        head_show?.classList.toggle("u-switch--closed")
+
+    })
+
+    sider_show?.addEventListener("click", () => {
+        sider_show?.classList.toggle("u-switch--closed")
+
+    })
 }
