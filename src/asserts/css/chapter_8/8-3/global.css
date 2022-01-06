@@ -475,10 +475,15 @@ button:-moz-focusring,
     top       : 0;
     padding   : 0 15px;
     box-sizing: border-box;
+    z-index: 10;
 }
 
 .m-setting--open {
     right     : 0px;
+}
+
+.m-setting--open + .u-mask {
+    display: block;
 }
 
 .m-setting__bar {
@@ -603,6 +608,17 @@ button:-moz-focusring,
     position: relative;
     left: 2px;
     top: 2px;
+}
+
+.u-mask {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
 }
 
 /* --------------------------响应式系统------------------------ */

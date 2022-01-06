@@ -284,6 +284,8 @@ export const AntPro1 = () => {
             </ul>
         </div>
     </div>
+
+    <div className="u-mask"></div>
   </div>
 }
 
