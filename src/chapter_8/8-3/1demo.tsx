@@ -432,6 +432,9 @@ const webFixAndShow = () => {
     var head_show = document.querySelector(".j-head--show")
     var sider_show = document.querySelector(".j-sider--show")
     var main_head = document.querySelector(".g-ant__main__head")
+    var sider_wrap = document.querySelector(".g-ant-sider__wrap")
+    var ant_sider = document.querySelector(".g-ant__sider")
+    
 
     head_fixed?.addEventListener("click", () => {
         head_fixed?.classList.toggle("u-switch--closed")
@@ -440,16 +443,17 @@ const webFixAndShow = () => {
 
     sider_fixed?.addEventListener("click", () => {
         sider_fixed?.classList.toggle("u-switch--closed")
-        
+        sider_wrap?.classList.toggle("g-ant-sider__wrap--fixed")
     })
 
+    // 右侧边栏显示内容 ==> 内容头部开关按钮 是否隐藏头部
     head_show?.addEventListener("click", () => {
         head_show?.classList.toggle("u-switch--closed")
-
+        main_head?.classList.toggle("hide")
     })
 
     sider_show?.addEventListener("click", () => {
         sider_show?.classList.toggle("u-switch--closed")
-
+        ant_sider?.classList.toggle("hide")
     })
 }

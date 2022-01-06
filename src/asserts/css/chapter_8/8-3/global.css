@@ -317,9 +317,9 @@ button:-moz-focusring,
     z-index: 2;
 }
 
-.g-ant-main__head--fixed + .g-ant__main__main {
+/* 加not 当我点击去掉头部时 判断是否隐藏状态 从而确定是否添加外边距 */
+.g-ant-main__head--fixed:not(.hide) + .g-ant__main__main {
     margin-top: 48px;
-
 }
 
 .g-ant__main__head > span {
