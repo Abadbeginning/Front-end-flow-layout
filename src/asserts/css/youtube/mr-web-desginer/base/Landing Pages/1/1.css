@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root {
+    --theme: #2980b9;
+}
+/* 浏览器初始化 */
+* {
+    /* 字体 */
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* 盒子内 */
+    box-sizing: border-box;
+    /* 类似边框 */
+    outline: none;
+    border: none;
+    /* 去除下划线 */
+    text-decoration: none;
+    /* 字母开头大写 */
+    text-transform: capitalize;
+}
+
+.container {
+    /* 弹性布局 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 换行 */
+    flex-wrap: wrap;
+
+    /* 内填充 */
+    padding: 15px 7%;
+    min-height: 100vh;
+    background: #eee;
+}
+
+.container .content {
+    flex: 1 1 400px;
+}
+
+.container .image {
+    flex: 1 1 400px;
+}
+
+.container .image img {
+    width: 100%;
+}
+
+/* 标题 */
+.container .content .title {
+    /* 字体大小 */
+    font-size: 45px;
+    /* 全部大写 */
+    text-transform: uppercase;
+    color: #2980b9;
+}
+
+/* 段落 */
+.container .content p {
+    color: #666;
+    padding: 5px 0;
+}
+
+.container .content .count-down {
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.container .content .count-down .box {
+    background: #fff;
+    padding: 5px;
+    flex: 1 1 20px;
+    border: 1px solid #3333;
+    text-align: center;
+}
+
+.container .content .count-down .box span {
+    color: var(--theme);
+    font-size: 20px;
+}
+
+.container .content .btn {
+    display: inline-block;
+    background: var(--theme);
+    color: #fff;
+    font-size: 17px;
+    padding: 8px 50px;
+    margin: 10px 0;
+    /* 当聚焦时 变大间距时过渡动画 */
+    transition: .2s ease-out;
+    /* transition: 2s ease-in; */
+}
+
+.container .content .btn:hover {
+    /* 字符间间距 */
+    letter-spacing: 2px;
+}
+
