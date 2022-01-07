@@ -423,6 +423,10 @@ button:-moz-focusring,
     width: 32px;
 }
 
+.m-logo1>.u-bar{
+    color: inherit;
+}
+
 .m-menu {
     color: #8c959e;
 }
@@ -668,7 +672,15 @@ button:-moz-focusring,
 
     .g-ant__sider {
         display: none;
-        
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 6;
+    }
+
+    /* 遮盖层的效果 */
+    .g-ant__sider:is(.show) + .u-mask {
+        display: block;
     }
 }
 @media(max-width:768px){}

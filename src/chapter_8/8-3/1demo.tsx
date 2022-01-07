@@ -296,7 +296,7 @@ export const AntPro1 = () => {
 }
 
 const barOnclick = () => {
-    var bar = document.querySelector(".u-bar")
+    var bar = document.querySelector(".g-ant-sider__foot .u-bar")
     var sider = document.querySelector(".g-ant__sider")
     var menus = document.querySelectorAll('.m-menu');
 
@@ -401,9 +401,11 @@ const selectStatus = () => {
     var m_bar = document.querySelector(".m-setting__bar")
     var bar_i = document.querySelector(".m-setting__bar i")
     var themes = document.querySelectorAll('.m-setting-item__theme>li');
+    var bar = document.querySelector(".m-logo1 .u-bar")
 
     m_bar?.addEventListener("click", () => {
         m_set?.classList.toggle("m-setting--open")
+        
         if (m_set?.className.includes("m-setting--open")) {
             if (bar_i?.className) {
                 bar_i.className = "iconfont icon-close";
@@ -440,6 +442,9 @@ const webFixAndShow = () => {
     var main_head = document.querySelector(".g-ant__main__head")
     var sider_wrap = document.querySelector(".g-ant-sider__wrap")
     var ant_sider = document.querySelector(".g-ant__sider")
+    var sider_mask = document.querySelector(".g-ant__sider + .u-mask")
+    var m_logo1 = document.querySelector(".m-logo1")
+    var bar = document.querySelector(".m-logo1 .u-bar")
     
 
     head_fixed?.addEventListener("click", () => {
@@ -462,4 +467,18 @@ const webFixAndShow = () => {
         sider_show?.classList.toggle("u-switch--closed")
         ant_sider?.classList.toggle("hide")
     })
+
+    bar?.addEventListener("click", () => {
+        // 若右侧边栏 显示内容下的 侧边菜单 不是关闭状态 添加左侧边栏
+        if (!ant_sider?.className.includes("hide")) {
+            ant_sider?.classList.add("show")
+            m_logo1?.classList.toggle("hide")
+        }
+    })
+
+    sider_mask?.addEventListener("click", () => {
+        ant_sider?.classList.remove("show")
+        m_logo1?.classList.toggle("hide")
+    })
+
 }
