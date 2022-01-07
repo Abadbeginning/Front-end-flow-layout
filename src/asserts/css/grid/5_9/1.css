@@ -1,0 +1,28 @@
+.main {
+    width: 530px;
+    height: 300px;
+    background: skyblue;
+    display: grid;
+    /* grid-area: 1 / 1 / 1 / 1; */
+}
+
+.main img {
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.main span {
+    grid-area: 1 / 1 / 1 / 1;
+    justify-self: end;
+    margin: 5px;
+}
+
+.main p {
+    grid-area: 1 / 1 / 1 / 1;
+    align-self: end;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}

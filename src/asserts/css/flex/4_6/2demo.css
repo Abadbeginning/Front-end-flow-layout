@@ -1,0 +1,55 @@
+/* .box {
+    width: 300px;
+    height: 200px;
+    background: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    
+} */
+
+/* .box {
+    width: 300px;
+    height: 200px;
+    background: skyblue;
+    position: relative;
+} */
+
+/* 
+    transform: scale(0.5) translate(-100%, -100%); 
+    平移 + 缩小
+*/
+/* .box div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.box {
+    width: 300px;
+    height: 200px;
+    background: skyblue;
+    position: relative;
+}
+
+.box div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

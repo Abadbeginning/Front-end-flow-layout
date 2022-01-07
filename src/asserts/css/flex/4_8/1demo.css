@@ -1,0 +1,15 @@
+.main {
+    height: 200px;
+    background: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+.main div {
+    width: 30px;
+    height: 30px;
+    background: pink;
+    border-radius: 50%;
+}

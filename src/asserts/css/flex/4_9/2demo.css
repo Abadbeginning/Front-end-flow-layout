@@ -1,0 +1,22 @@
+.main {
+    height: 200px;
+    background: skyblue;
+    display: flex;
+    align-items: center;
+}
+
+/* margin-right 默认把其他元素到边上 中间留白 */
+.main div:nth-of-type(1){
+    margin-right: auto;
+}
+
+.main div:nth-of-type(4){
+    margin-right: auto;
+}
+
+.main div {
+    width: 50px;
+    height: 100px;
+    background: pink;
+    margin-right: 10px;
+}

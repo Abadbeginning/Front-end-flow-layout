@@ -1,0 +1,36 @@
+/* 块级盒子 类似div p h1 这些 它们会占领整行 */
+/* 不给宽度 就知道了 */
+/* 独占一行 自动换行 */
+/* 支持所有样式 */
+/* 不写宽度时 跟父容器的宽度相同 */
+/* 所占区域是一个矩形 */
+.box1 {
+    /* width: 100px; */
+    height: 100px;
+    background: pink;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+}
+
+/* 内联盒子 */
+/*  盒子不会产生换行 */
+/* 有些样式不支持，例如：width、height */
+/* 不写宽度的时候，宽度由内容决定 */
+/* 所占区域不一定是矩形 */
+/* 内联标签之间会间隙 */
+
+/* 内联不适合布局 适合写内容 */
+
+.inline1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+
+.inline2 {
+    background: skyblue;
+}

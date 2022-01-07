@@ -1,0 +1,23 @@
+.main {
+    /* width: 500px; */
+    height: 500px;
+    background: skyblue;
+    /* display: flex; */
+    display: inline-flex;
+
+    /* 水流的开始结束 方向 */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* flex-wrap: wrap; */
+    flex-flow: column wrap;
+}
+
+.main div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    font-size: 20px;
+    border: 2px black solid;
+}

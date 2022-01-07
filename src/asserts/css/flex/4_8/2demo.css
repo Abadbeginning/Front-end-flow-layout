@@ -1,0 +1,26 @@
+.main {
+    width: 500px;
+    height: 200px;
+    background: skyblue;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px; */
+    /* 禁止滚动 */
+    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.main section {
+    width: 600px;
+}
+
+.main div {
+    width: 30px;
+    height: 30px;
+    background: pink;
+    border-radius: 50%;
+    float: left;
+    margin-right: 87px;
+}

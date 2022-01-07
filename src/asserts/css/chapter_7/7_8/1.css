@@ -1,0 +1,651 @@
+:root{
+    --container: 100%;
+}
+
+/* 设置页面的背景色 */
+.ghost-container {
+    list-style-type: none;
+    background: #ebebeb;
+    /* height: 100vh; */
+}
+
+/* 设置a标签的颜色 */
+a {
+    color: #505050;
+}
+
+.ghost-fix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index:9999; 
+    /* overflow: hidden; */
+}
+
+/* logo 所占的高度 背景色 弹性布局 */
+.head {
+    height: 190px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 设置 logo宽度  */
+.head-logo {
+    width: 200px;
+}
+
+/* 导航栏 背景色、左右填充
+    、上边框和下边框的大小 颜色 */
+.nav {
+    border-top: 1px #ebebeb solid;
+    border-bottom: 2px #e1e1e1 solid;
+    background: white;
+    padding: 0 15px;
+}
+
+/* 
+    设置 切换导航栏的高度 以及弹性布局
+*/
+.nav-bar {
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+    设为手型
+*/
+.nav-bar i {
+    cursor: pointer;
+}
+
+/* 
+    默认导航栏内容不展示
+*/
+.nav-list {
+    display: none;
+}
+
+/* 
+    设置
+    行高(居中)
+    左右填充 很重要 
+    适配到pc端li标签之间的间距的
+    相对定位
+*/
+.nav-list li {
+    height: 56px;
+    line-height: 56px;
+    position: relative;
+    padding: 0 22px;
+}
+
+/* 
+
+    设置绝对位置
+    边框背景色 大小宽度
+    以及位置
+*/
+.nav-list li.active::after {
+    position: absolute;
+    content: "";
+    background: #e67e22;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    /* top: 56px; */
+    bottom: 0;
+}
+
+/* input:checked + ul {
+    display: block;
+} */
+
+/* 
+    点击导航栏按钮时 展示导航栏内容
+*/
+input:checked + .nav-list {
+    display: block;
+}
+
+/* 
+    隐藏 复选框
+*/
+.nav-toggle {
+    display: none;
+}
+
+.ghost-main-foot {
+    margin-top: 246px;
+}
+
+/* 
+    左右填充
+    自动居中
+    设置宽度
+    盒模型 不让其溢出
+*/
+.main {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: var(--container);
+    box-sizing: border-box;
+}
+
+/* 
+    设置上边距 背景色 填充 行高
+*/
+.main-list {
+    margin-top: 35px;
+    background: white;
+    padding: 35px;
+    line-height: 1.5;
+}
+
+/* 
+    标题 设置字体居中 大小 加粗 
+*/
+.main-list h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+/* 
+   设置文字居中 颜色   
+*/
+.main-list div {
+    text-align: center;
+    color: #959595;
+}
+
+/* 
+    设置上边距 字体大小
+*/
+.main-list p {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* 
+    上下边距 白字橘底 文字内填充 手型 无边框
+*/
+.main-list button {
+    margin: 30px 0;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background: #e67e22;
+}
+
+/* 
+    横线 上填充
+*/
+.main-list section {
+    border-top:1px #ebebeb solid;
+    padding-top: 20px;
+
+}
+
+/* 
+    右边距
+*/
+.main-list section i {
+    margin-right: 10px;
+}
+
+/* 
+    设置侧边栏内容 背景色 上边距 内填充
+*/
+.main-aside {
+    background: white;
+    margin-top: 35px;
+    padding: 35px;
+}
+
+/* 
+    设置字体大小 粗细 下边距 下划线 相对定位
+*/
+.main-aside h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 1px #cccccc solid;
+    position: relative;
+}
+
+.main-aside h3::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    left: 0;
+    bottom: -1px;
+    background: #e67e22;
+}
+
+.main-aside p {
+    margin-top: 30px;
+}
+
+/* 
+    上边距 宽度占满 白子橘底 无边框
+    内填充
+*/
+.main-aside button {
+    margin-top: 30px;
+    width: 100%;
+    background: #e67e22;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 
+    上边距
+*/
+.main-aside div {
+    margin-top: 25px;
+}
+
+/* 
+    边框 布局 上右边距 内填充
+*/
+.main-aside div a {
+    border: 1px #ebebeb solid;
+    /* 可以左右 可上下 */
+    display: inline-block;
+
+    /* 容器会自动换行 */
+    /* display: block; */
+
+    /* 只能左右 */
+    /* display: inline; */
+    margin: 11px 7px 0 0;
+    padding: 5px 10px;
+}
+
+/* 
+    上边距 背景色 上填充 防止溢出
+*/
+.foot {
+    margin-top: 35px;
+    padding-top: 35px;
+    background: #202020;
+    overflow: hidden;
+}
+
+/* 
+    设置宽度
+    默认居中
+*/
+.foot-wrapper {
+    width: var(--container);
+    margin: 0 auto;
+}
+
+/* 
+    左右填充
+    下边距
+*/
+.foot-item {
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+/* 
+    字体颜色 大小 粗细 手形
+    下边框 下填充 相对位置
+*/
+.foot-item h3 {
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px #cccccc solid;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+/* 
+    绝对定位 定位位置 边框 宽高
+    背景色
+*/
+.foot-item h3::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    left: 0;
+    bottom: -1px;
+    background: #e67e22;
+}
+
+/* 
+    上边距
+*/
+.foot-item div {
+    margin-top: 25px;
+}
+
+/* 
+    块布局 字体颜色 边距
+*/
+.foot-item a {
+    display: inline-block;
+    margin: 10px;
+    color: #959595;
+    /* margin: 11px 7px 0 0;
+    padding: 5px 10px; */
+}
+
+/* 
+    弹性布局 需要高度 --> 水平、垂直居中 不然后布局不生效
+    灰底黑色 
+*/
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: #555555;
+    height: 80px;
+}
+
+
+/* 设置grid */
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* 
+    组合器选择前一个元素的直接子代的节点
+        表示带有以 attr 命名的属性，
+        且属性值至少包含一个 value 值的元素。
+*/
+/* .row > [class*="col"] { */
+.row > [class*="col"] {
+    grid-area: auto/auto/auto/span 12;
+}
+
+.row .col-1{
+    grid-area: auto/auto/auto/span 1;
+}
+.row .col-2{
+    grid-area: auto/auto/auto/span 2;
+}
+.row .col-3{
+    grid-area: auto/auto/auto/span 3;
+}
+.row .col-4{
+    grid-area: auto/auto/auto/span 4;
+}
+.row .col-5{
+    grid-area: auto/auto/auto/span 5;
+}
+.row .col-6{
+    grid-area: auto/auto/auto/span 6;
+}
+.row .col-7{
+    grid-area: auto/auto/auto/span 7;
+}
+.row .col-8{
+    grid-area: auto/auto/auto/span 8;
+}
+.row .col-9{
+    grid-area: auto/auto/auto/span 9;
+}
+.row .col-10{
+    grid-area: auto/auto/auto/span 10;
+}
+.row .col-11{
+    grid-area: auto/auto/auto/span 11;
+}
+.row .col-12{
+    grid-area: auto/auto/auto/span 12;
+}
+
+@media (min-width: 576px){
+    :root {
+        --container: 500px;
+    }
+
+    .row .col-sm-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-sm-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-sm-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-sm-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-sm-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-sm-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-sm-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-sm-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-sm-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-sm-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-sm-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-sm-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+/* 
+    等最小有768像素 隐藏导航切换按钮 导航栏内容弹性布局
+*/
+@media (min-width: 768px){
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    :root {
+        --container: 700px;
+    }
+
+    .row > [class*="col"] {
+        padding: 0 15px;
+    }
+
+    .row .col-md-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-md-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-md-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-md-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-md-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-md-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-md-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-md-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-md-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-md-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-md-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-md-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+@media (min-width: 992px){
+    :root {
+        --container: 940px;
+    }
+
+    /* 与文章内容产生空隙 */
+    .row > [class*="col"] {
+        padding: 0 15px;
+    }
+
+    .row .col-lg-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-lg-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-lg-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-lg-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-lg-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-lg-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-lg-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-lg-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-lg-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-lg-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-lg-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-lg-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+@media (min-width: 1200px){
+    :root {
+        --container: 1160px;
+    }
+
+    .row > [class*="col"] {
+        padding: 0 15px;
+    }
+
+    .row .col-xl-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-xl-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-xl-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-xl-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-xl-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-xl-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-xl-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-xl-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-xl-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-xl-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-xl-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-xl-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+@media (min-width: 1400px){
+    .row .col-xxl-1{
+        grid-area: auto/auto/auto/span 1;
+    }
+    .row .col-xxl-2{
+        grid-area: auto/auto/auto/span 2;
+    }
+    .row .col-xxl-3{
+        grid-area: auto/auto/auto/span 3;
+    }
+    .row .col-xxl-4{
+        grid-area: auto/auto/auto/span 4;
+    }
+    .row .col-xxl-5{
+        grid-area: auto/auto/auto/span 5;
+    }
+    .row .col-xxl-6{
+        grid-area: auto/auto/auto/span 6;
+    }
+    .row .col-xxl-7{
+        grid-area: auto/auto/auto/span 7;
+    }
+    .row .col-xxl-8{
+        grid-area: auto/auto/auto/span 8;
+    }
+    .row .col-xxl-9{
+        grid-area: auto/auto/auto/span 9;
+    }
+    .row .col-xxl-10{
+        grid-area: auto/auto/auto/span 10;
+    }
+    .row .col-xxl-11{
+        grid-area: auto/auto/auto/span 11;
+    }
+    .row .col-xxl-12{
+        grid-area: auto/auto/auto/span 12;
+    }
+}
+
+

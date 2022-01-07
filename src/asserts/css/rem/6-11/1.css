@@ -1,0 +1,263 @@
+/* https://www.zhangxinxu.com/wordpress/2018/11/display-grid-css-css3/ */
+a {
+    color: #4c514d;
+}
+
+/* 
+    头部
+        设置高度 弹性布局 垂直居中 左右填充2.667vw
+*/
+.head {
+    height: 10.667vw;
+    display: flex;
+    align-items: center;
+    padding: 0 2.667vw;
+}
+
+/* 
+    logo 左间距2.667vw 右间距自动 默认将空白撑开
+*/
+.head-logo {
+    /* margin-left: 2.667vw; */
+    margin-right: auto;
+}
+
+/* 
+    设置logo颜色和大小
+*/
+.head-logo i {
+    color: #f47296;
+    font-size: 6.933vw;
+}
+
+/* 
+    设置右间距
+*/
+.head-search {
+    margin-right: 3.467vw;
+}
+
+/* 
+    设置搜索图标大小和颜色
+*/
+.head-search i {
+    font-size: 5.867vw;
+    color: #c9c9c9;
+}
+
+/* 
+    登陆图标 
+        设置右间距 背景色 
+        width + lineheight是为了文字垂直居中 方便写成一个圆形
+        设置弧度
+        文字大小
+        上下左右填充
+*/
+.head-login {
+    margin-right: 3.467vw;
+    background-color: #e8e8e8;
+    /* height: 6.4vw; */
+    line-height: 6.4vw;
+    width: 6.4vw;
+    border-radius: 50%;
+    font-size: 3.2vw;
+    padding: 1.333vw;
+}
+
+/* 
+    登陆文字颜色
+*/
+.head-login a {
+    color: #f47296;
+}
+
+/* 
+    下载 APP 设置文字大小 背景色 弧度 填充
+*/
+.head-app {
+    font-size: 3.733vw;
+    background: #f47296;
+    border-radius: 1.067vw;
+    padding: 1.333vw 2.667vw;
+}
+
+/* 
+    下载 APP 字体颜色
+*/
+.head-app a {
+    color: white;
+}
+
+/* 
+    导航栏
+        设置高度
+        左右填充
+        下边框线
+        相对定位 ==> 是为了定位 下箭头
+*/
+.nav {
+    height: 10.667vw;
+    padding: 0 2.667vw;
+    border-bottom: 0.133vw solid #f3f3f3;
+    position: relative;
+}
+
+/* 
+    设置高度百分百
+    弹性布局 垂直居中
+    溢出隐藏
+*/
+.nav-list {
+    height:100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 
+    每个文字的宽度
+    右间距
+    不收缩
+    文字居中
+    相对定位 ==> 为了定位红色下边框
+*/
+.nav-list li {
+    width: 10.667vw;
+    margin-right: 5.333vw;
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+}
+
+/* 
+    选中文字字体的颜色
+*/
+.nav-list-active a {
+    color:#f47296;
+}
+
+/* 
+    选中文字下边框线设置
+        绝对定位
+        内容无
+        背景色红
+        设置宽高(大小)
+        left bottom 调节具体位置
+*/
+.nav-list-active::after {
+    position: absolute;
+    content: "";
+    background: #f47296;
+    width: 11.733vw;
+    height: 0.533vw;
+    left: -0.533vw;
+    bottom: -2.667vw;
+}
+
+/* 
+    下箭头
+        绝对定位
+        right top 调节具体位置
+        设置宽 高
+        背景色白
+        弹性布局 水平 垂直居中
+*/
+.nav-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10.667vw;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+    视频展示区
+        上下左右填充
+        网格布局
+        2列 设置列与列之间的空隙
+*/
+.video {
+    padding: 2.133vw 2.667vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    column-gap: 2.667vw;
+}
+
+/* 
+    还有为每个图片 前面添加播放量等文字 + 图标
+    给它们一个grid 在当前网格中(针对的每个图片 其实只有1个网格 1/1/1/1)
+*/
+.video-item-pic {
+    display: grid;
+}
+
+/* 
+    网格分区
+        图片宽高占满
+    等比显示
+    带有一定的弧度
+*/
+.video-item-pic img {
+    grid-area: 1 / 1 / 1 / 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.333vw;
+}
+
+/* 
+    网格分区
+    添加左边距
+    弹性布局 将文字 + 图标(颜色白) 放到图片的正前下方
+    宽度94% 是为了左右的间距空的更好看
+    高度100%
+*/
+.video-item-pic span {
+    grid-area: 1 / 1 / 1 / 1;
+    margin-left: 1.067vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: white;
+    width: 94%;
+    height: 100%;
+    /* padding: 0 0.533vw; */
+}
+
+/* .video-item-pic div {
+    grid-area: 1 / 1 / 1 / 1;
+    align-self: end;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0 0.533vw 0.533vw 0.533vw;
+} */
+
+/* 
+    图片中 图表和文字添加间距
+*/
+.video-item-pic i {
+    margin-right: 1.067vw;
+}
+/* 
+    图片下面的标题
+        与图片的间距
+        与下面的间距
+        字体大小
+        设置行高 更加好看点
+*/
+.video-item-title {
+    margin-top: 2.4vw;
+    margin-bottom: 4vw;
+    font-size: 3.2vw;
+    /* font-weight: 500; */
+    line-height: 4.267vw;
+}

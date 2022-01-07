@@ -1,0 +1,895 @@
+@charset "utf-8";
+
+/* --------------------重置样式-------------------------------- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea,
+th,
+td {
+    margin : 0;
+    padding: 0
+}
+
+/*设置默认字体*/
+body {
+    font-size  : 14px;
+    font-style : normal;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
+}
+
+/*字体太小用户体检不好，让small恢复12px*/
+small {
+    font-size: 12px
+}
+
+h1 {
+    font-size: 18px
+}
+
+h2 {
+    font-size: 16px
+}
+
+h3 {
+    font-size: 14px
+}
+
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+a {
+    text-decoration : none;
+    background-color: transparent
+}
+
+a:hover,
+a:active {
+    outline-width  : 0;
+    text-decoration: none
+}
+
+/*重置表格*/
+table {
+    border-collapse: collapse;
+    border-spacing : 0
+}
+
+/*重置hr*/
+hr {
+    border: 0;
+    height: 1px
+}
+
+/*图形图片*/
+img {
+    border-style: none
+}
+
+img:not([src]) {
+    display: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+/*下面的操作是针对于html5页面布局准备的，不支持ie6~8以及其他低版本的浏览器*/
+html {
+    /*禁用系统默认菜单*/
+    -webkit-touch-callout   : none;
+    /*关闭iphone & Android的浏览器纵向和横向模式中自动调整字体大小的功能*/
+    -webkit-text-size-adjust: 100%
+}
+
+input,
+textarea,
+button,
+a {
+    /*表单或者a标签在手机点击时会出现边框或彩色的背景区域，意思是去除点击背景框*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+/*重置html5元素的默认样式*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block
+}
+
+audio:not([controls]),
+video:not([controls]) {
+    display: none;
+    height : 0
+}
+
+progress {
+    vertical-align: baseline
+}
+
+mark {
+    background-color: #ff0;
+    color           : #000
+}
+
+sub,
+sup {
+    position      : relative;
+    font-size     : 75%;
+    line-height   : 0;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    outline  : 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+textarea {
+    overflow: auto
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding     : 0
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding   : 0
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset    : -2px
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-input-placeholder {
+    color  : inherit;
+    opacity: .54
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font              : inherit
+}
+
+/* --------------------------通用方法------------------------ */
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* 全局变量 */
+:root {
+    /* 全局颜色 */
+    --theme: #1890ff;
+}
+
+/* --------------------------通用布局(g-)------------------------ */
+/* 左侧菜单栏 */
+/* 弹性布局 */
+.g-ant {
+    display: flex;
+}
+
+/* 
+    默认不收缩 
+    设置背景色 默认宽度 最小高度
+    z-index 是用在特定的媒体宽度下 展开菜单栏时
+                产生遮盖 但不能遮盖菜单栏 所以z-index值要大于遮盖值
+*/
+.g-ant__sider {
+    flex-shrink: 0;
+    background: #00152a;
+    width: 208px;
+    min-height: 100vh;
+    z-index: 3;
+}
+
+/* 
+    侧边栏收缩
+        设置宽度 多余的隐藏
+*/
+.g-ant__sider--closed {
+    width: 48px;
+    overflow: hidden;
+}
+
+/* 
+    当侧边栏收缩时 图标位置也要变化
+*/
+.g-ant__sider--closed .m-logo {
+    padding: 16px 8px;
+}
+
+/* 
+    侧边栏收缩时 每个菜单项图标变大1.5倍
+*/
+.g-ant__sider--closed .m-menu {
+    transform: scale(1.5);
+}
+
+/* 
+    侧边栏收缩时 隐藏菜单项子项
+*/
+.g-ant__sider--closed .m-menu__sub {
+    display: none;
+}
+
+/* 内容项 */
+/* 
+    默认撑开
+        弹性列布局    
+        背景色设置
+*/
+.g-ant__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background    : #f1f2f6;
+}
+
+/* 
+    头部设置
+        高度 背景色 阴影设置
+        弹性布局 水平靠右 垂直居中
+        内填充 设置每个元素间的间隙
+*/
+.g-ant__main__head {
+    height: 48px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0 20px;
+    column-gap: 20px;
+}
+
+/* 
+    固定头部
+        固定位置 占满左右 设置层级
+
+*/
+.g-ant-main__head--fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* 加not 当我点击去掉头部时 判断是否隐藏状态 从而确定是否添加外边距 */
+.g-ant-main__head--fixed:not(.hide) + .g-ant__main__main {
+    margin-top: 48px;
+}
+
+/* 
+    头部下span元素与左边元素的间距
+*/
+.g-ant__main__head > span {
+    margin-left: -15px;
+}
+
+/* 
+    内容项下的
+        内容详情 默认撑开
+*/
+.g-ant__main__main {
+    flex-grow: 1;
+}
+
+/* 
+    内容项下的 页脚
+        上 下边距的设置 文字图标左右上下居中 字体颜色设置
+*/
+.g-ant__main__foot {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #868782;
+}
+
+/* 
+    内容项下的 页脚
+        设置每个元素左右间距
+*/
+.g-ant__main__foot a {
+    color: inherit;
+    margin: 0 20px;
+}
+
+/* 
+    包裹菜单侧边栏
+        设置颜色 高度 弹性列布局
+*/
+.g-ant-sider__wrap {
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    包裹菜单侧边栏固定
+        固定位置 左 上 0
+        宽度继承 多余内容隐藏
+*/
+.g-ant-sider__wrap--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: inherit;
+    overflow: hidden;
+}
+
+/* 
+    菜单栏 logo图标 + 文字
+        内容不收缩 
+*/
+.g-ant-sider__head {
+    flex-shrink: 0;
+    /* height: 40px;
+    align-items: center; */
+}
+
+/* 
+    菜单栏 具体项
+        默认撑开   
+        隐藏x轴 开放y轴
+*/
+.g-ant-sider__main {
+    flex-grow: 1;
+    /* overflow-y: auto; */
+    overflow: hidden auto;
+}
+
+/* 
+    页脚默认不收缩
+*/
+.g-ant-sider__foot {
+    flex-shrink: 0;
+}
+
+/* 设置菜单栏滚动条的宽高 */
+.g-ant-sider__main::-webkit-scrollbar {
+    width : 6px;
+    height: 6px;
+}
+
+/* 设置菜单栏滚动条的背面 和 跳动条的背景色 */
+.g-ant-sider__main::-webkit-scrollbar-thumb {
+    background   : #51606d;
+    border-radius: 3px;
+}
+.g-ant-sider__main::-webkit-scrollbar-track {
+    background   : #263849;
+    border-radius: 3px;
+}
+
+/* 设置其余滚动条的样式 */
+::-webkit-scrollbar {
+    width : 8px;
+    height: 6px;
+}
+
+/*  */
+::-webkit-scrollbar-thumb {
+    background   : #51606d;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background   : #263849;
+    border-radius: 3px;
+}
+
+/* --------------------------通用模块(m-)------------------------ */
+/* 
+    菜单栏 logo + 文字
+    弹性布局 水平居中
+    白色 内填充
+*/
+.m-logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 16px;
+}
+
+/* 
+    设置logo的宽度
+*/
+.m-logo > img {
+    width: 32px;
+    
+}
+
+/* 
+    设置相对应的文字与logo的间距
+    文字的大小 以及不收缩
+*/
+.m-logo > h2 {
+    margin-left: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* 头部logo 自动左对齐 默认不显示 垂直居中 */
+.m-logo1 {
+    display: none;
+    align-items: center;
+    /* 元素向左 */
+    margin-right: auto;
+    /* margin-left: auto; */
+    /* color: white; */
+}
+
+/* 
+    设置头部logo的宽度
+*/
+.m-logo1 > img {
+    width: 32px;
+}
+
+/* 
+    头部 logo按钮 颜色继承
+*/
+.m-logo1 > .u-bar{
+    color: inherit;
+}
+
+/* 
+    菜单栏 菜单项颜色
+*/
+.m-menu {
+    color: #8c959e;
+}
+
+/* 
+   菜单栏 菜单项标题
+   垂直居中 
+   设置高度 间隙 内填充
+*/
+.m-menu__title {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    column-gap: 10px;
+    padding: 0 15px;
+}
+
+/* 
+    菜单栏 菜单项
+        箭头图标 靠右
+*/
+.m-menu__title > span {
+    margin-right: auto;
+}
+
+/* 
+    菜单栏 菜单项被选中时 标题颜色为白色
+*/
+.m-menu--selected .m-menu__title {
+    color: white;
+}
+
+/* 
+    菜单栏 菜单项被选中时 子项打开
+*/
+.m-menu--selected .m-menu__sub {
+    display: block;
+}
+
+/* 
+    菜单栏 菜单项不被选中时 默认关闭
+*/
+.m-menu__sub {
+    display: none;
+}
+
+/* 
+ 每个二级菜单 设置高度 垂直居中 左填充
+*/
+.m-menu__sub > li {
+    height: 40px;
+    padding-left: 45px;
+    line-height: 40px;
+}
+
+/* 
+    二级菜单被选中时的背景色和颜色
+*/
+.m-menu__sub--selected {
+    /* background: #1890ff; */
+    background: var(--theme);
+    color: white;
+}
+
+/* 
+    内容项目 每个内容详情项 
+        宽高100% 背景色 字体大小 圆角 弹性列布局
+*/
+.m-card {
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-size: 16px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    内容项目 每个内容详情项 文字标题 
+        不收缩 高度 水平居中 下边框 左填充
+*/
+.m-card__title {
+    flex-shrink: 0;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px #f1f1f1 solid;
+    padding-left: 20px;
+}
+
+/* 
+    内容项目 每个内容详情项 具体内容
+        默认撑开 内填充
+*/
+.m-card__body {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* 
+
+    右侧 系统设置界面
+        设置宽高 固定定位 紧贴最右边
+        左右内填充  盒模型类型设置 
+        z-index是为了 展开设置界面时 覆盖遮盖
+*/
+.m-setting {
+    width     : 300px;
+    height    : 100vh;
+    background: white;
+    position  : fixed;
+    right     : -300px;
+    /* right     : 0px; */
+    top       : 0;
+    padding   : 0 15px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* 
+    系统设置界面打开
+*/
+.m-setting--open {
+    right     : 0px;
+}
+
+/* 
+    打开系统设置界面 开启遮盖
+*/
+.m-setting--open + .u-mask {
+    display: block;
+}
+
+/* 
+
+    系统设置界面 设置按钮
+        宽高 背景色 圆角 绝对定位(悬浮) 对于整个宽高放置位置 手型 ==> 针对正方形
+        水平 垂直居中 颜色白色 ==> 针对正方形里面的图标 位置颜色的设置
+
+*/
+.m-setting__bar {
+    width          : 48px;
+    height         : 48px;
+    background     : var(--theme);
+    border-radius: 2px;
+    position: absolute;
+    /* position: relative; */
+    /* 自身的宽度 */
+    left: -48px;
+    /* 计算 ==> 自身的高度 减去 自身一半的高度 */
+    top: calc(50% - 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor         : pointer;
+}
+
+/*
+    系统设置界面 设置按钮 字体大小
+ */
+.m-setting__bar > i {
+    font-size: 22px;
+}
+
+/* 
+   每个设置项上下边界 
+*/
+.m-setting__item {
+    margin: 50px 0;
+}
+
+/* 
+    主题色的具体内容(设置项具体内容下的每个元素 水平排列方式) 与主题色的间距
+*/
+.m-setting-item__theme {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 
+    系统设置 固定内容和显示内容
+        每个子项 上下边界 水平排列
+
+*/
+.m-setting-item__toggle > li {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.g-ant-sider__foot {
+
+}
+
+
+/* --------------------------通用元件(u-)------------------------ */
+/* 
+    菜单开关按钮 内填充
+*/
+.u-bar {
+    padding: 15px;
+}
+
+/* 
+    主题色 每个颜色的宽高 手型 上下水平居中 圆角 白色
+*/
+.u-foxiaolan,
+.u-bomu,
+.u-huoshan,
+.u-rimu,
+.u-mingqing,
+.u-jiguanglv,
+.u-jikelan,
+.u-jiangzi {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+/* 
+    给主题色下每个元素 设置背景色
+*/
+.u-foxiaolan {
+    background: #188efc;
+}
+
+.u-bomu {
+    background: #f5212d;
+}
+
+.u-huoshan {
+    background: #fe531f;
+}
+
+.u-rimu {
+    background: #fbae14;
+}
+
+.u-mingqing {
+    background: #14c2c3;
+}
+
+.u-jiguanglv {
+    background: #53c41a;
+}
+
+.u-jikelan {
+    background: #2f54eb;
+}
+
+.u-jiangzi {
+    background: #722ed1;
+}
+
+/* 
+    水平线
+        宽高 背景色 上下边距
+*/
+.u-divider {
+    width: 100%;
+    height: 1px;
+    background: #f0f0f0;
+    margin: 15px 0;
+}
+
+/* 
+    设置界面 固定和显示内容 开关按钮
+        宽高 圆角 背景色 手型
+
+*/
+.u-switch {
+    width: 28px;
+    height: 16px;
+    border-radius: 100px;
+    background: var(--theme);
+    cursor: pointer;
+}
+
+/* 
+    设置界面 固定和显示内容 开关按钮 关闭背景色
+*/
+.u-switch--closed {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* 
+    设置界面 固定和显示内容 开关按钮 关闭后 变换圆点的位置
+*/
+.u-switch--closed .u-switch__handle {
+    left: 14px;
+}
+
+/* 
+    设置圆点
+        宽高 圆角 背景色 相对位置(不是悬浮 是真实移动)
+*/
+.u-switch__handle {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    /* position: absolute; */
+    position: relative;
+    left: 2px;
+    top: 2px;
+}
+
+/* 
+    遮盖
+        默认不展示 宽高占满屏 背景色 固定定位 给个层级值
+*/
+.u-mask {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+/* --------------------------响应式系统------------------------ */
+
+@media(max-width:1400px){}
+@media(max-width:1200px){}
+@media(max-width:992px){
+    /* 展示头部 logo 和 菜单栏按钮 */
+    .m-logo1 {
+        display: flex;
+    }
+
+    /* 
+        隐藏菜单栏 固定定位 层级大于遮盖项 为了展开时 不受遮盖色影响
+    */
+    .g-ant__sider {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 6;
+    }
+
+    /* 遮盖层的效果 当是菜单栏展示的时候 遮盖 */
+    .g-ant__sider:is(.show) + .u-mask {
+        display: block;
+    }
+}
+@media(max-width:768px){}
+@media(max-width:576px){}

@@ -1,0 +1,24 @@
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    padding: 10px;
+    border: 5px black solid;
+    box-sizing: border-box;
+
+}
+
+.box2 {
+    width: 400px;
+    height: 111px;
+    background: skyblue;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* border-box 将标准盒模型转变为怪异盒模型 */
+input {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}

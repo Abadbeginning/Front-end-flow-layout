@@ -1,0 +1,312 @@
+html{
+    /* font-size:26.666667vw; */
+}
+
+body{
+    /* font-size: 0.16rem; */
+    font-size: 1rem;
+}
+
+/* 
+    设置a标签的颜色
+*/
+a{
+    color: #34372e;
+}
+
+/* 
+    网易移动端头部实现
+    设置背景色 和高度
+    弹性布局 水平垂直居中
+    左右填充
+    字体白色
+*/
+.head {
+    height: 2.6875rem;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.625rem;
+    color: white;
+}
+
+/* 
+    设置i标签大小
+*/
+.head i {
+    font-size: 1.125rem;
+}
+
+/* 
+    设置用户和email 大小和宽度比
+*/
+.head-user, .head-email{
+    font-size: 0.875rem;
+    width: 25%;
+}
+
+.head-user {
+
+}
+
+/* 
+    设置logo宽度和文字居中
+*/
+.head-logo {
+    width: 50%;
+    text-align: center;
+}
+
+/* 
+    设置图片高度
+*/
+.head-logo img {
+    height: 1.25rem;
+}
+
+/* 
+    文字向右
+*/
+.head-email {
+    text-align: right;
+}
+
+/* 
+    email图标和文字间隔0.1875rem
+*/
+.head-email i:first-of-type {
+    margin-right: 0.1875rem;
+}
+
+/* 
+    6-7 rem案例：网易移动端导航实现 
+        设置高度
+        弹性布局 垂直居中
+        左右填充0.625rem
+        设置字体大小
+        底部加个边框线
+*/
+.nav {
+    height: 2.875rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.625rem;
+    font-size: 1.125rem;
+    border-bottom: 0.0625rem #ededed solid;
+}
+
+/* 
+    设置a的相对位置
+    自动等比增长
+    文字居中
+*/
+.nav li {
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+
+/* a标签 字体变红 */
+.nav li.active a {
+    color: #ef191b;
+}
+
+/* 
+    绝对定位
+    a标签的背景色的大小 设置为条状
+    after是在元素后面加内容 需要配置content
+    跳转到a标签的正下方
+ */
+.nav li.active::after {
+    content: "";
+    position: absolute;
+    background: #ef191b;
+    width: 0.9375rem;
+    height: 0.125rem;
+    margin-left: -0.5625rem;
+    left: 50%;
+    /* left: 40%; */
+    bottom: -0.75rem;
+}
+
+/* 
+    设置背景色
+    内填充
+    相对定位 是为定位上下箭头
+*/
+.nav-news {
+    background: #f8f8f8;
+    padding: 0.625rem 0.4375rem 0.25rem 0.75rem;
+    position: relative;
+}
+
+/* 
+    设置高度
+    溢出隐藏
+*/
+.nav-news__closed {
+    height: 4.375rem;
+    ovflow: hidden;
+}
+
+/* 
+    当内容是关闭状态 + 相邻选择器(上下箭头) ==> 箭头0°(箭头向下)
+*/
+.nav-news__closed + .nav-sub-arrow {
+    transform: rotate(0);
+}
+
+/* 
+    设为网格
+    x行 5列
+*/
+.nav-news-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-rows: 1fr; */
+    grid-auto-rows: 1fr;
+}
+
+/* 
+    绝对定位
+    偏移位置设置
+    偏移180°
+*/
+.nav-sub-arrow {
+    position: absolute;
+    bottom: 0.625rem;
+    right: 0.375rem;
+    transform: rotate(180deg);
+}
+
+/* 给内容一个左右内填充 不让两边靠边 */
+.news {
+    padding: 0 0.625rem;
+}
+
+/* 
+    给大标题设置字体大小
+    设置行高
+*/
+.news-title {
+    font-size: 1.125rem;
+    height: 4.125rem;
+    line-height: 4.125rem;
+}
+
+/* 
+    每项新闻内容给个距离
+*/
+.news-item {
+    margin-bottom: 2.1875rem;
+}
+
+/* 
+    小标题字体的粗细 大小设置
+    行高设置
+    设置字长
+    向下距离
+*/
+.news-item-title {
+    font-weight: 400;
+    line-height: 1.375rem;
+    font-size: 1.0625rem;
+    width: 90%;
+    margin-bottom: 0.5rem;
+}
+
+/* 
+    设置小字体
+    灰色
+*/
+.news-item-info {
+    font-size: 0.75rem;
+    color: #b3b4b6;
+}
+
+/* 
+    图片等比缩放
+    占比100%
+    向下0.3125rem
+*/
+.news-item-img img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0.3125rem;
+}
+
+/* 
+    弹性布局
+    加边框线
+    内填充0.625rem
+*/
+.news1-item {
+    display: flex;
+    border-top: 16px #f6f7f9 solid;
+    padding: 0.625rem;
+}
+
+/* 
+    宽度
+*/
+.news1-item-img {
+    width: 32%;
+    /* height: 3.125rem; */
+}
+
+/* 
+    字体大小 粗细设置
+    行高
+    向下
+*/
+.news1-item-title {
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 1.4375rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 
+    撑满行剩余空间
+    与右边间距0.9375rem
+*/
+.news1-item-content {
+    flex-grow: 1;
+    margin-right: 0.9375rem;
+}
+
+/* 
+
+    这里不仅要设100%宽度 高度也要设置 不然跟着行高走了
+    图片等比展示
+*/
+.news1-item-img img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+    内容提示内容 颜色灰 字体小 
+    弹性布局 垂直居中 水平两边排开
+*/
+.news1-item-content-info {
+    color: #b3b4b6;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 
+    给APP文字 添加粉色外边框 红字 
+    给边框加弧度
+    设置内填充
+*/
+.app {
+    color: #fb1515;
+    border: 0.0625rem #fbbab8 solid;
+    border-radius: 6.25rem;
+    padding: 0.0625rem 0.25rem;
+}
