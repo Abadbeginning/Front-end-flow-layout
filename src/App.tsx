@@ -65,7 +65,7 @@ import {Media4} from './chapter_7/7_6/1demo'
 import {Ghost} from './chapter_7/7_8/ghost'
 import {AntPro} from './chapter_8/8-2/1demo'
 import {AntPro1} from './chapter_8/8-3/1demo'
-
+import {Page} from "./youtube/mr-web-desginer/base/Landing Pages/1/1demo"
 
 function App() {
 
@@ -134,7 +134,8 @@ function App() {
       {/* <Media4 /> */}
       {/* <Ghost /> */}
       {/* <AntPro /> */}
-      <AntPro1 />
+      {/* <AntPro1 /> */}
+      <Page />
       {/* <PersonalInfoComponent /> */}
       
       {/* <header className="App-header">
