@@ -22,21 +22,25 @@ export const AntPro1 = () => {
 
   return <div>
     <div className={"g-ant"}>
+      {/* 左侧边栏 bem*/}
       <div className="g-ant__sider">
       {/* <div className="g-ant__sider g-ant__sider--closed"> */}
         <div className="g-ant-sider__wrap g-ant-sider__wrap--fixed">
+           {/* 头部logo + 文字 */}
            <div className="g-ant-sider__head">
              <a className="m-logo" href="#">
-              <img src={Logo} alt="" />
-              <h2>Ant Design Pro</h2> 
+                <img src={Logo} alt="" />
+                <h2>Ant Design Pro</h2> 
              </a>
              
            </div>
 
+           {/*  */}
            <ul className="g-ant-sider__main">
              {/* 是否被选中 */}
               {/* <li className="m-menu m-menu--selected"> */}
               <li className="m-menu m-menu--selected">
+                {/* 内容的一级项目 */}
                 <div className="m-menu__title">
                   <i className="iconfont icon-car"></i>
                   <span>Dashboard</span>
@@ -49,6 +53,7 @@ export const AntPro1 = () => {
                 </ul>
               </li>
               
+              {/* 具体子项 */}
               <li className="m-menu">
                   <div className="m-menu__title">
                       <i className="iconfont icon-printer"></i>
@@ -133,15 +138,19 @@ export const AntPro1 = () => {
               </li>
            </ul>
 
+           {/* 页脚 开发状态的图标 */}
            <div className="g-ant-sider__foot">
             <i className="iconfont icon-outdent u-bar"></i>
            </div>
         </div>
       </div>
-
+    
+      {/* 侧边栏的遮盖 */}
       <div className="u-mask"></div>
 
+      {/*  具体内容页 */}
       <div className="g-ant__main">
+        {/* 头 */}
         <div className="g-ant__main__head g-ant-main__head--fixed">
             <div className="m-logo1">
                 <img src={Logo} alt="" />
@@ -155,6 +164,7 @@ export const AntPro1 = () => {
             <i className="iconfont icon-error"></i>
         </div>
         
+        {/* 主体 */}
         <div className="g-ant__main__main">
             <div className="index-main">
                 <div className="m-card">
@@ -212,7 +222,8 @@ export const AntPro1 = () => {
                 </div>
             </div>
         </div>
-
+        
+        {/* 尾 */}
         <div className="g-ant__main__foot">
             <p>
                 <a href="#">Ant Design Pro</a>
@@ -230,7 +241,7 @@ export const AntPro1 = () => {
       </div> */}
     </div>
     
-    {/* 右侧设置侧边栏 */}
+    {/* 右侧设置侧边栏 固定 可展开收缩*/}
     <div className="m-setting">
         <div className="m-setting__bar">
             <i className="iconfont icon-setting"></i>
@@ -250,6 +261,7 @@ export const AntPro1 = () => {
             </ul>
         </div>
 
+        {/* 下划线 */}
         <div className="u-divider"></div>
 
         <div className="m-setting__item">
@@ -291,22 +303,29 @@ export const AntPro1 = () => {
         </div>
     </div>
 
+    {/* 遮盖用的 */}
     <div className="u-mask"></div>
   </div>
 }
 
+// 左侧边栏 左下角 开启/收缩图标 click监听
 const barOnclick = () => {
     var bar = document.querySelector(".g-ant-sider__foot .u-bar")
     var sider = document.querySelector(".g-ant__sider")
     var menus = document.querySelectorAll('.m-menu');
 
     bar?.addEventListener("click", (e) => {
+        // 收缩侧边栏
         sider?.classList.toggle("g-ant__sider--closed")
         
+        // 每个收缩菜单项子项
         menus.forEach(element => {
+            // 去除展开状态
             element.classList.remove("m-menu--selected")
+            // 找到包含icon-arrow的类
             var arrow = element.querySelector('[class*="icon-arrow"]');
             if (arrow?.className) {
+                // 设置收缩图标
                 arrow.className = 'iconfont icon-arrowdown';
             }
         });
@@ -335,24 +354,28 @@ const liEventListener = () => {
         // })
         
     } 
-        
+
+// 菜单选中/或关闭 图标的处理 
 const getOnclick = () => {
       // 收集侧边栏所有一级菜单    
       var menuTitles = document.querySelectorAll(".m-menu__title")
     //   console.log(menu);
-     // 监听哪个菜单被点击了
+     // 循环遍历 监听哪个菜单被点击了
      menuTitles.forEach(element => {
         //  console.log(element);
         element.addEventListener("click", (e) => {
             // console.log(e);
+            // 获取父容器
             var menu = element?.parentElement
             // console.log(element?.parentElement);
             // console.log("menu ==>", menu);
             
+            // 选中/去选中状态
             menu?.classList.toggle("m-menu--selected")
 
+            // 若是选中状态
             if (menu?.className.includes("m-menu--selected")) {
-                //打开状态
+                // 找到包含icon-arrow的类 替换它的标签
                 var arrow = element.querySelector('[class*="icon-arrow"]');
                 if (arrow?.className) {
                     arrow.className = 'iconfont icon-arrowup';
@@ -360,7 +383,7 @@ const getOnclick = () => {
                 console.log("arrow ==>",arrow?.className);
 
             } else {
-                //关闭状态
+                //关闭状态 替换类
                 var arrow = element.querySelector('[class*="icon-arrow"]');
                 // console.log("arrow ==>",arrow?.className);
                 // arrow = "<i className='iconfont icon-arrowdown'></i>";
@@ -395,6 +418,7 @@ const getOnclick = () => {
     //     }
 }
 
+// 右侧边栏
 const selectStatus = () => {
     // 获取类 m-setting m-setting__bar 右侧界面和按钮
     var m_set = document.querySelector(".m-setting")
@@ -403,9 +427,12 @@ const selectStatus = () => {
     var themes = document.querySelectorAll('.m-setting-item__theme>li');
     var bar = document.querySelector(".m-logo1 .u-bar")
 
+    // 监控设置按钮
     m_bar?.addEventListener("click", () => {
+        // 有m-setting--open则移除 没有则添加
         m_set?.classList.toggle("m-setting--open")
         
+        // 若是打开状态 则图标显示为关闭按钮 否则设置按钮
         if (m_set?.className.includes("m-setting--open")) {
             if (bar_i?.className) {
                 bar_i.className = "iconfont icon-close";
@@ -417,6 +444,7 @@ const selectStatus = () => {
         }
     })
 
+    // 遍历颜色主题
     for(var i=0;i<themes.length;i++){
         themes[i].addEventListener("click", () => {
             for(var i=0;i<themes.length;i++){
@@ -433,6 +461,7 @@ const selectStatus = () => {
 
 }
 
+// 右侧设置界面 固定内容和显示内容项的设置
 const webFixAndShow = () => {
     // j-head--fixed
     var head_fixed = document.querySelector(".j-head--fixed")
@@ -446,38 +475,54 @@ const webFixAndShow = () => {
     var m_logo1 = document.querySelector(".m-logo1")
     var bar = document.querySelector(".m-logo1 .u-bar")
     
-
+    // 固定头部
     head_fixed?.addEventListener("click", () => {
+        // 改变开关按钮状态
         head_fixed?.classList.toggle("u-switch--closed")
+        // 改变头部固定类
         main_head?.classList.toggle("g-ant-main__head--fixed")
     })
 
+    // 侧边菜单固定
     sider_fixed?.addEventListener("click", () => {
+        // 改变开关按钮状态
         sider_fixed?.classList.toggle("u-switch--closed")
+        // 改变侧边栏固定类
         sider_wrap?.classList.toggle("g-ant-sider__wrap--fixed")
     })
 
     // 右侧边栏显示内容 ==> 内容头部开关按钮 是否隐藏头部
     head_show?.addEventListener("click", () => {
+        // 改变开关按钮状态
         head_show?.classList.toggle("u-switch--closed")
+        // 添加/隐藏头部
         main_head?.classList.toggle("hide")
     })
 
+    // 侧边栏菜单显示/隐藏
     sider_show?.addEventListener("click", () => {
+        // 改变开关按钮状态
         sider_show?.classList.toggle("u-switch--closed")
+        // 显示/隐藏 添加/去除隐藏(display:none)即可 
         ant_sider?.classList.toggle("hide")
     })
 
+    // 头部 菜单收缩按钮的监听
     bar?.addEventListener("click", () => {
         // 若右侧边栏 显示内容下的 侧边菜单 不是关闭状态 添加左侧边栏
         if (!ant_sider?.className.includes("hide")) {
+            // 展开菜单栏
             ant_sider?.classList.add("show")
+            // 隐藏头部最左侧的logo和菜单收缩按钮
             m_logo1?.classList.toggle("hide")
         }
     })
 
+    // 菜单栏在特定宽度 出现遮盖效果时 监听
     sider_mask?.addEventListener("click", () => {
+        // 关闭菜单栏
         ant_sider?.classList.remove("show")
+        // 隐藏头部最左侧的logo和菜单收缩按钮
         m_logo1?.classList.toggle("hide")
     })
 
