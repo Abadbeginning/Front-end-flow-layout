@@ -5,6 +5,7 @@ import { useEffect } from "react"
 
 let countDate = new Date('jul 1, 2021 00:00:00').getTime();
 
+// 设置天数 时分秒
 const countDown = () => {
   let now = new Date().getTime()
   let gap = now - countDate

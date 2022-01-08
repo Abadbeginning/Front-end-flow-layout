@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
 :root {
     --theme: #2980b9;
 }
+
 /* 浏览器初始化 */
 * {
     /* 字体 */
@@ -33,6 +35,7 @@
     background: #eee;
 }
 
+/* 以400px 为分界 变大 变小 换行 */
 .container .content {
     flex: 1 1 400px;
 }
@@ -41,6 +44,7 @@
     flex: 1 1 400px;
 }
 
+/* 图片宽度 百分百 */
 .container .image img {
     width: 100%;
 }
@@ -92,6 +96,7 @@
     padding: 8px 50px;
     margin: 10px 0;
     /* 当聚焦时 变大间距时过渡动画 */
+    /* transition: 12s ease-out; */
     transition: .2s ease-out;
     /* transition: 2s ease-in; */
 }
