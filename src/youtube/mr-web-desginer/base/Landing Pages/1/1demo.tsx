@@ -1,7 +1,41 @@
 import "asserts/css/youtube/mr-web-desginer/base/Landing Pages/1/1.css"
 import Bro from "asserts/css/youtube/mr-web-desginer/base/Landing Pages/1/img/Create-bro.svg"
+import Animate from "asserts/css/youtube/mr-web-desginer/base/Landing Pages/1/img/create-animate.svg"
+import { useEffect } from "react"
+
+let countDate = new Date('jul 1, 2021 00:00:00').getTime();
+
+const countDown = () => {
+  let now = new Date().getTime()
+  let gap = now - countDate
+  
+  let second = 1000
+  let minute = second * 60
+  let hour = minute * 60
+  let day = hour * 24
+
+  let d = Math.floor(gap / (day))
+  let h = Math.floor((gap % (day)) / (hour))
+  let m = Math.floor((gap % (hour)) / (minute))
+  let s = Math.floor((gap % (minute)) / (second))
+  let docDay = document.getElementById('day')
+  docDay!.innerText = String(d)
+
+  document.getElementById("hour")!.innerText = String(h)
+  document.getElementById("minute")!.innerText = String(m)
+  document.getElementById("second")!.innerText = String(s)
+}
+
+const init = () => {
+  setInterval(() => {
+    countDown()
+  }, 1000)
+
+}
 
 export const Page = () => {
+  useEffect(init)
+
   return <div>
     <div className="container">
       <div className="content">
@@ -32,8 +66,10 @@ create a complete responsive coming soon page UI design with count down effect</
 
       </div>
       <div className="image">
-        <img src={Bro} alt="" />
+        {/* <img src={Bro} alt="" /> */}
+        <img src={Animate} alt="" />
       </div>
     </div>
   </div>
 }
+
